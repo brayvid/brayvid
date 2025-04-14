@@ -1,1 +1,1 @@
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact&theme=gruvbox_light)](https://github.com/brayvid)
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact)](https://github.com/brayvid)
