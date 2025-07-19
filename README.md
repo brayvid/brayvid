@@ -9,7 +9,7 @@
   </a>
 </p>
 
-Developer with expertise in data science, finance, and physics. My work focuses on answering real-world questions through computation, optimization, and visualization.
+Developer with expertise in data science, finance, and physics, focusing on answering real-world questions through computation, optimization, and visualization.
 
 ---
 
