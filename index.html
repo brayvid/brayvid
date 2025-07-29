@@ -35,13 +35,10 @@
 
     
     <style>
-        /* ========================================================================= */
-        /* === THE FINAL, CRITICAL FIX FOR MOBILE FONT SCALING                   === */
-        /* ========================================================================= */
         html {
-            -webkit-text-size-adjust: 100%; /* Prevents font scaling in landscape mode on iOS */
-            -ms-text-size-adjust: 100%; /* IE */
-            text-size-adjust: 100%; /* Standard */
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            text-size-adjust: 100%;
         }
 
         body {
@@ -111,7 +108,7 @@
 
     <div id="resume-container">
         <div id="resume-content">
-            <!-- All resume HTML content is correct and remains unchanged -->
+            <!-- All resume HTML content remains exactly the same -->
             <div style="text-align: center;">
                 <h1 style="font-size: 19pt; font-weight: 600; margin: 0; padding: 0; letter-spacing: 1.2px; line-height: 1;">BLAKE RAYVID</h1>
                 <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: underline;">hi@blakerayvid.com</a></p>
@@ -176,7 +173,6 @@
             element.style.transform = 'none';
             container.style.height = 'auto';
 
-            // A minimal timeout is still good practice to ensure the browser has finished its reflow.
             setTimeout(() => {
                 const opt = {
                     margin:       0,
@@ -185,15 +181,16 @@
                     pagebreak:    { mode: 'avoid-all' },
                     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
                     html2canvas:  {
-                        scale: 2, // High resolution
-                        useCORS: true
+                        scale: 2,
+                        useCORS: true,
+                        // === THIS IS THE KEY FOR SELECTABLE TEXT ===
+                        letterRendering: true
                     }
                 };
                 
                 const worker = html2pdf().from(element).set(opt).save();
     
                 worker.then(() => {
-                    // Restore the original styles for on-screen viewing
                     element.style.transform = originalTransform;
                     container.style.height = originalContainerHeight;
                 });
