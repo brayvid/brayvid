@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <title>CV | Blake Rayvid</title>
+    <!-- All other meta tags remain the same -->
     <meta name="description" content="CV for Blake Rayvid, a data science and software engineering professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta name="author" content="Blake Rayvid">
     <link rel="canonical" href="https://cv.blakerayvid.com/">
@@ -34,6 +35,15 @@
 
     
     <style>
+        /* ========================================================================= */
+        /* === THE FINAL, CRITICAL FIX FOR MOBILE FONT SCALING                   === */
+        /* ========================================================================= */
+        html {
+            -webkit-text-size-adjust: 100%; /* Prevents font scaling in landscape mode on iOS */
+            -ms-text-size-adjust: 100%; /* IE */
+            text-size-adjust: 100%; /* Standard */
+        }
+
         body {
             background-color: #f0f0f0;
             font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
@@ -157,21 +167,16 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
     <script>
-        // =========================================================================
-        // === THE FINAL PDF FIX: A TIMEOUT FOR MOBILE BROWSERS                  ===
-        // =========================================================================
         function downloadPDF() {
             const element = document.getElementById('resume-content');
             const container = document.getElementById('resume-container');
             const originalTransform = element.style.transform;
             const originalContainerHeight = container.style.height;
             
-            // 1. Reset styles to make the element full-size for capturing
             element.style.transform = 'none';
             container.style.height = 'auto';
 
-            // 2. Introduce a short delay. This gives mobile browsers time to reflow 
-            // the layout and render the element at its full size before we capture it.
+            // A minimal timeout is still good practice to ensure the browser has finished its reflow.
             setTimeout(() => {
                 const opt = {
                     margin:       0,
@@ -180,27 +185,23 @@
                     pagebreak:    { mode: 'avoid-all' },
                     jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
                     html2canvas:  {
-                        scale: 2, // Higher resolution
-                        useCORS: true,
-                        // Be explicit about the dimensions for the canvas
-                        width: element.scrollWidth,
-                        height: element.scrollHeight
+                        scale: 2, // High resolution
+                        useCORS: true
                     }
                 };
                 
-                // 3. Generate the PDF inside the timeout
                 const worker = html2pdf().from(element).set(opt).save();
     
-                // 4. Chain the promise to restore the original styles after the PDF is saved
                 worker.then(() => {
+                    // Restore the original styles for on-screen viewing
                     element.style.transform = originalTransform;
                     container.style.height = originalContainerHeight;
                 });
 
-            }, 100); // 100ms is imperceptible to the user but enough for the browser.
+            }, 50); 
         }
 
-        // Scaling logic function remains the same.
+        // The rest of the JavaScript is correct and remains the same.
         function scaleResumeForMobile() {
             const resumeContainer = document.getElementById('resume-container');
             const resumeContent = document.getElementById('resume-content');
@@ -220,7 +221,6 @@
             }
         }
 
-        // Orchestration for initial layout remains the same.
         function initializeLayout() {
             const content = document.getElementById('resume-content');
             scaleResumeForMobile();
