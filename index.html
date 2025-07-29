@@ -2,11 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO: Title & Meta Description -->
-    <title>Resume | Blake Rayvid</title>
-    <meta name="description" content="The professional resume for Blake Rayvid, a data science and software engineering professional with expertise in Python, Machine Learning, and financial analysis.">
+    <title>Blake Rayvid | CV</title>
+    <meta name="description" content="CV for Blake Rayvid, a data science and software engineering professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta name="author" content="Blake Rayvid">
     
     <!-- SEO: Canonical URL to prevent duplicate content issues -->
@@ -16,7 +16,7 @@
 
     <!-- SEO: Open Graph / Facebook / LinkedIn -->
     <meta property="og:title" content="Blake Rayvid - Data Science & Software Engineering Resume">
-    <meta property="og:description" content="Data science professional with expertise in Python, Machine Learning, and financial analysis.">
+    <meta property="og:description" content="Data science professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cv.blakerayvid.com/">
     <meta property="og:site_name" content="Blake Rayvid's Resume">
@@ -24,7 +24,7 @@
     <!-- SEO: Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Blake Rayvid - Data Science & Software Engineering Resume">
-    <meta name="twitter:description" content="Data science professional with expertise in Python, Machine Learning, and financial.">
+    <meta name="twitter:description" content="Data science professional with expertise in applied mathematics, machine learning, and financial analysis.">
 
     <!-- SEO: JSON-LD Structured Data for Google Rich Results -->
     <script type="application/ld+json">
@@ -43,6 +43,7 @@
             margin: 0;
             padding: 20px 0;
         }
+
         #resume-content {
             background-color: #fff;
             width: 8.5in;
@@ -51,7 +52,7 @@
             box-shadow: 0 0 10px rgba(0,0,0,0.15);
             box-sizing: border-box;
             color: #000;
-            font-size: 9.6pt;
+            font-size: 9.5pt;
             line-height: 1.4;
         }
 
@@ -86,21 +87,11 @@
         #download-button:hover {
             background-color: #dcdcdc;
         }
-
-        /* *** MODIFIED MEDIA QUERY FOR CONSISTENT MOBILE EXPERIENCE *** */
-        @media (max-width: 790px) {
-            #resume-content {
-                width: 100%;
-                box-shadow: none;
-                padding: 15px;
-            }
-        }
-
-
+        
         @media print {
             body { background-color: #fff; padding: 0; }
             #download-button-container { display: none; }
-            #resume-content { box-shadow: none; margin: 0; }
+            #resume-content, #resume-container { box-shadow: none; margin: 0; transform: none !important; height: auto !important; width: auto !important; }
         }
     </style>
 </head>
@@ -110,70 +101,73 @@
         <button id="download-button" onclick="downloadPDF()">Download as PDF</button>
     </div>
 
-    <div id="resume-content">
-        <!-- HEADER -->
-        <div style="text-align: center;">
-            <h1 style="font-size: 19pt; font-weight: 600; margin: 0; padding: 0; letter-spacing: 1.2px; line-height: 1;">BLAKE RAYVID</h1>
-            <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: none;">hi@blakerayvid.com</a></p>
-        </div>
+    <!-- NEW: Wrapper div for scaling -->
+    <div id="resume-container">
+        <div id="resume-content">
+            <!-- HEADER -->
+            <div style="text-align: center;">
+                <h1 style="font-size: 19pt; font-weight: 600; margin: 0; padding: 0; letter-spacing: 1.2px; line-height: 1;">BLAKE RAYVID</h1>
+                <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: underline;">hi@blakerayvid.com</a></p>
+            </div>
 
-        <!-- SUMMARY -->
-        <h2>SUMMARY</h2>
-        <hr>
-        <p style="margin: 0;">Blake is a data science professional with a strong foundation in mathematics and financial analysis, complemented by experience in software engineering and accounting. Blake has expertise in machine learning, algorithm development, financial modeling and data visualization. With 15 years of programming experience using Python, JavaScript, SQL, MATLAB and more, Blake excels at delivering insights from data and solving complex problems across industries.</p>
+            <!-- SUMMARY -->
+            <h2>SUMMARY</h2>
+            <hr>
+            <p style="margin: 0;">Blake is a data science professional with a strong foundation in mathematics and financial analysis, complemented by experience in software engineering and accounting. Blake has expertise in machine learning, algorithm development, financial modeling and data visualization. With 15 years of programming experience using Python, JavaScript, SQL, MATLAB and more, Blake excels at delivering insights from data and solving complex problems across industries.</p>
 
-        <!-- SKILLS -->
-        <h2>SKILLS</h2>
-        <hr>
-        <table style="width: 100%; border-collapse: collapse; line-height: 1.5;"><tbody>
-            <tr style="vertical-align: top;"><td style="width: 13%; padding-right: 10px;">Subjects:</td><td>Data Science, Machine Learning, Algorithms, Optimization, Linear Algebra, Probability, Statistics, Calculus.</td></tr>
-            <tr style="vertical-align: top;"><td style="padding-right: 10px;">Languages:</td><td>Python, JavaScript, SQL, MATLAB, Java, C++, Arduino, Git, Unix Shell, HTML, CSS, LaTeX, Markdown.</td></tr>
-            <tr style="vertical-align: top;"><td style="padding-right: 10px;">Tools:</td><td>Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, SpaCy, Flask, Node.js, D3.js.</td></tr>
-            <tr style="vertical-align: top;"><td style="padding-right: 10px;">Software:</td><td>QuickBooks, Office, Mathematica, QuantConnect, Thinkorswim, Final Cut Pro, Photoshop, Lightroom.</td></tr>
-        </tbody></table>
-        
-        <!-- EDUCATION -->
-        <h2>EDUCATION</h2>
-        <hr>
-        <table style="width: 100%; border-collapse: collapse;"><tbody>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Apr 2024 – Aug 2024</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Flatiron School Data Science Bootcamp,</strong> New York, NY<br>Data Analysis and Engineering, Advanced Machine Learning, <a href="https://blakerayvid.com/2024/08/21/tqqq-trading-algorithm/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Capstone Trading Algorithm.</a></td></tr>
-            <tr><td style="width: 18%; vertical-align: top;">Jan 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px;"><strong style="font-weight: 600;">The City College of New York,</strong> New York, NY<br>Bachelor of Science in Applied Mathematics, Financial Math Concentration, Minor in Physics.</td></tr>
-        </tbody></table>
+            <!-- SKILLS -->
+            <h2>SKILLS</h2>
+            <hr>
+            <table style="width: 100%; border-collapse: collapse; line-height: 1.5;"><tbody>
+                <tr style="vertical-align: top;"><td style="width: 13%; padding-right: 10px;">Subjects:</td><td>Data Science, Machine Learning, Algorithms, Optimization, Linear Algebra, Probability, Statistics, Calculus.</td></tr>
+                <tr style="vertical-align: top;"><td style="padding-right: 10px;">Languages:</td><td>Python, JavaScript, SQL, MATLAB, Java, C++, Arduino, Git, Unix Shell, HTML, CSS, LaTeX, Markdown.</td></tr>
+                <tr style="vertical-align: top;"><td style="padding-right: 10px;">Tools:</td><td>Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, SpaCy, Flask, Node.js, D3.js.</td></tr>
+                <tr style="vertical-align: top;"><td style="padding-right: 10px;">Software:</td><td>QuickBooks, Office, Mathematica, QuantConnect, Thinkorswim, Final Cut Pro, Photoshop, Lightroom.</td></tr>
+            </tbody></table>
+            
+            <!-- EDUCATION -->
+            <h2>EDUCATION</h2>
+            <hr>
+            <table style="width: 100%; border-collapse: collapse;"><tbody>
+                <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Apr 2024 – Aug 2024</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Flatiron School Data Science Bootcamp,</strong> New York, NY<br>Data Analysis and Engineering, Advanced Machine Learning, <a href="https://blakerayvid.com/2024/08/21/tqqq-trading-algorithm/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Capstone Trading Algorithm.</a></td></tr>
+                <tr><td style="width: 18%; vertical-align: top;">Jan 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px;"><strong style="font-weight: 600;">The City College of New York,</strong> New York, NY<br>Bachelor of Science in Applied Mathematics, Financial Math Concentration, Minor in Physics.</td></tr>
+            </tbody></table>
 
-        <!-- EXPERIENCE -->
-        <h2>EXPERIENCE</h2>
-        <hr>
-        <table style="width: 100%; border-collapse: collapse;"><tbody>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Dec 2022 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Properties Stagehand, The Metropolitan Opera,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Handles props and scenery with precision, including transport, setup and storage.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Prepares stage by sweeping and installing linoleum, drop cloths and flooring.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Aug 2019 – Dec 2022</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Delivery Driver, Insomnia Cookies,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Delivered freshly baked cookies nightly by bicycle.</p><p style="margin: 2px 0 0 0;">- <a href="https://blakerayvid.com/2022/05/01/routecat/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Created a clustering traveling salesman solver</a> to provide multiple drivers with optimal routes.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">JavaScript Developer, The City College of New York,</strong> New York, NY<p style="margin: 2px 0 0 0;">- <a href="https://blakerayvid.com/2019/04/04/science-sims/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Developed interactive web apps</a> showcasing mathematics and physics concepts.</p><p style="margin: 2px 0 0 0;">- <a href="https://sims.blakerayvid.com/optics/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Published an interactive ray diagram</a> used by faculty to teach optics to undergraduates.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top;">Aug 2014 – Jan 2016</td><td style="width: 82%; vertical-align: top; padding-left: 20px;"><strong style="font-weight: 600;">Accounting Assistant, Uncle Sam's Army/Navy Outfitters,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Managed sales data and invoices for three Army surplus stores with QuickBooks.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Conducted bank statement reconciliations and cash register audits.</p></td></tr>
-        </tbody></table>
+            <!-- EXPERIENCE -->
+            <h2>EXPERIENCE</h2>
+            <hr>
+            <table style="width: 100%; border-collapse: collapse;"><tbody>
+                <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Dec 2022 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Properties Stagehand, The Metropolitan Opera,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Handles props and scenery with precision, including transport, setup and storage.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Prepares stage by sweeping and installing linoleum, drop cloths and flooring.</p></td></tr>
+                <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Aug 2019 – Dec 2022</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Delivery Driver, Insomnia Cookies,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Delivered freshly baked cookies nightly by bicycle.</p><p style="margin: 2px 0 0 0;">- <a href="https://blakerayvid.com/2022/05/01/routecat/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Created a clustering traveling salesman solver</a> to provide multiple drivers with optimal routes.</p></td></tr>
+                <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">JavaScript Developer, The City College of New York,</strong> New York, NY<p style="margin: 2px 0 0 0;">- <a href="https://blakerayvid.com/2019/04/04/science-sims/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Developed interactive web apps</a> showcasing mathematics and physics concepts.</p><p style="margin: 2px 0 0 0;">- <a href="https://sims.blakerayvid.com/optics/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Published an interactive ray diagram</a> used by faculty to teach optics to undergraduates.</p></td></tr>
+                <tr><td style="width: 18%; vertical-align: top;">Aug 2014 – Jan 2016</td><td style="width: 82%; vertical-align: top; padding-left: 20px;"><strong style="font-weight: 600;">Accounting Assistant, Uncle Sam's Army/Navy Outfitters,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Managed sales data and invoices for three Army surplus stores with QuickBooks.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Conducted bank statement reconciliations and cash register audits.</p></td></tr>
+            </tbody></table>
 
-        <!-- PROJECTS -->
-        <h2>PROJECTS</h2>
-        <hr>
-        <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2025/05/04/soap-social-polling/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Created a new polling platform</a> around the idea of submitting one word at a time to describe officials.</p>
-        <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2025/04/19/based-news-reader/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Developed a smart news reader</a> that queries the Gemini API to prioritize headlines based on your preferences.</p>
-        <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2025/06/01/compare-stock-returns/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Built a tool to compare the returns of multiple stocks</a> and linear combinations of stocks against a specified benchmark.</p>
-        <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2024/07/12/sentiment-classifier/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Evaluated machine learning models to classify tweets</a> as positive, negative or neutral, achieving 83% test accuracy.</p>
+            <!-- PROJECTS -->
+            <h2>PROJECTS</h2>
+            <hr>
+            <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2025/05/04/soap-social-polling/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Created a new polling platform</a> around the idea of submitting one word at a time to describe officials.</p>
+            <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2025/04/19/based-news-reader/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Developed a smart news reader</a> that queries the Gemini API to prioritize headlines based on your preferences.</p>
+            <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2025/06/01/compare-stock-returns/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Built a tool to compare the returns of multiple stocks</a> and linear combinations of stocks against a specified benchmark.</p>
+            <p style="margin: 0 0 3px 0;"><a href="https://blakerayvid.com/2024/07/12/sentiment-classifier/" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">Evaluated machine learning models to classify tweets</a> as positive, negative or neutral, achieving 83% test accuracy.</p>
 
-        <!-- SERVICE -->
-        <h2>SERVICE</h2>
-        <hr>
-        <table style="width: 100%; border-collapse: collapse;"><tbody>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jan 2022 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Photographer, Hudson West Folk Festival,</strong> Jersey City, NJ<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Captures live performances and event moments for a nonprofit annual music festival.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top;">Mar 2020 – Oct 2020</td><td style="width: 82%; vertical-align: top; padding-left: 20px;"><strong style="font-weight: 600;">Volunteer, Invisible Hands,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Delivered essential food and supplies to people impacted by the COVID-19 pandemic, particularly those homebound and experiencing heightened anxiety.</p></td></tr>
-        </tbody></table>
+            <!-- SERVICE -->
+            <h2>SERVICE</h2>
+            <hr>
+            <table style="width: 100%; border-collapse: collapse;"><tbody>
+                <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jan 2022 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong style="font-weight: 600;">Photographer, Hudson West Folk Festival,</strong> Jersey City, NJ<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Captures live performances and event moments for a nonprofit annual music festival.</p></td></tr>
+                <tr><td style="width: 18%; vertical-align: top;">Mar 2020 – Oct 2020</td><td style="width: 82%; vertical-align: top; padding-left: 20px;"><strong style="font-weight: 600;">Volunteer, Invisible Hands,</strong> New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Delivered essential food and supplies to people impacted by the COVID-19 pandemic, particularly those homebound and experiencing heightened anxiety.</p></td></tr>
+            </tbody></table>
 
-        <!-- WEB -->
-        <h2>WEB</h2>
-        <hr>
-        <div style="width: 100%; display: table;">
-            <div style="display: table-row;">
-                <div style="display: table-cell; width: 33%; text-align: left;"><a href="http://blakerayvid.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">blakerayvid.com</a></div>
-                <div style="display: table-cell; width: 34%; text-align: center;"><a href="https://www.linkedin.com/in/blake-rayvid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">linkedin.com/in/blake-rayvid</a></div>
-                <div style="display: table-cell; width: 33%; text-align: right;"><a href="https://github.com/brayvid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">github.com/brayvid</a></div>
+            <!-- WEB -->
+            <h2>WEB</h2>
+            <hr>
+            <div style="width: 100%; display: table;">
+                <div style="display: table-row;">
+                    <div style="display: table-cell; width: 33%; text-align: left;"><a href="http://blakerayvid.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">blakerayvid.com</a></div>
+                    <div style="display: table-cell; width: 34%; text-align: center;"><a href="https://www.linkedin.com/in/blake-rayvid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">linkedin.com/in/blake-rayvid</a></div>
+                    <div style="display: table-cell; width: 33%; text-align: right;"><a href="https://github.com/brayvid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">github.com/brayvid</a></div>
+                </div>
             </div>
         </div>
     </div> <!-- End #resume-content -->
@@ -182,16 +176,77 @@
     <script>
         function downloadPDF() {
             const element = document.getElementById('resume-content');
+            
+            // --- START: FIX FOR PDF SCALING ---
+            
+            // Temporarily store the original transform style from mobile view
+            const originalTransform = element.style.transform;
+            
+            // Temporarily remove the transform to ensure the PDF captures the element at its full size
+            element.style.transform = 'none';
+            
+            // --- END: FIX FOR PDF SCALING ---
+
             const opt = {
-              margin:       0,
+              margin:       0, // The padding is in your CSS, so no margin is needed here.
               filename:     'blake-rayvid-cv.pdf',
               enableLinks:  true,
-              html2canvas:  { scale: 2 },
-              jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
+              html2canvas:  { 
+                  scale: 2, // Renders at 2x resolution for a sharper PDF
+                  useCORS: true // Important if you have external images/resources
+              },
+              jsPDF:        { 
+                  unit: 'in', 
+                  format: 'letter', 
+                  orientation: 'portrait' 
+              },
+              // This mode ensures your content, which is designed to be one page, stays on one page.
               pagebreak:    { mode: 'avoid-all' } 
             };
-            html2pdf().from(element).set(opt).save();
+            
+            // Generate the PDF. The .save() method returns a promise.
+            const worker = html2pdf().from(element).set(opt).save();
+
+            // After the promise resolves (PDF is saved), restore the original transform.
+            // This ensures the on-screen display snaps back to its scaled mobile view.
+            worker.then(() => {
+                element.style.transform = originalTransform;
+            });
         }
+
+        // *** NEW SCRIPT FOR DYNAMIC SCALING ***
+        function scaleResumeForMobile() {
+            const resumeContainer = document.getElementById('resume-container');
+            const resumeContent = document.getElementById('resume-content');
+            
+            // The original width of the resume in pixels (8.5 inches * 96 DPI)
+            const originalWidth = 816; 
+            const viewportWidth = window.innerWidth;
+
+            if (viewportWidth < originalWidth) {
+                const scale = viewportWidth / originalWidth;
+                
+                // Apply the scale transform to the content
+                resumeContent.style.transform = `scale(${scale})`;
+                // Set the origin to the top left corner
+                resumeContent.style.transformOrigin = 'top left';
+
+                // Adjust the container's height to match the scaled content's height
+                // This prevents the page from having an enormous empty space at the bottom
+                const scaledHeight = resumeContent.offsetHeight * scale;
+                resumeContainer.style.height = `${scaledHeight}px`;
+
+            } else {
+                // If the viewport is wider, remove all transforms and height adjustments
+                resumeContent.style.transform = 'none';
+                resumeContainer.style.height = 'auto';
+            }
+        }
+
+        // Run the function on initial load and whenever the window is resized
+        document.addEventListener('DOMContentLoaded', scaleResumeForMobile);
+        window.addEventListener('resize', scaleResumeForMobile);
+
     </script>
 </body>
 </html>
