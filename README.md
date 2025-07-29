@@ -1,3 +1,5 @@
+Of course. Here is your updated README with the link to `cv.blakerayvid.com` added as a new badge at the top.
+
 # Blake Rayvid
 
 <p align="left">
@@ -6,6 +8,9 @@
   </a>
   <a href="https://www.linkedin.com/in/blake-rayvid/" target="_blank">
     <img src="https://img.shields.io/badge/LinkedIn-Blake%20Rayvid-blue?style=flat-square&logo=linkedin" alt="LinkedIn">
+  </a>
+  <a href="https://cv.blakerayvid.com" target="_blank">
+    <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
 
