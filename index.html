@@ -109,10 +109,10 @@
 <body>
 
     <div id="download-button-container">
-        <button id="download-button" onclick="downloadPDF()">Download PDF</button>
+        <button id="download-button" onclick="downloadPDF()">Download as PDF</button>
     </div>
 
-    <!-- NEW: Wrapper div for scaling -->
+    <!-- Wrapper div for scaling -->
     <div id="resume-container">
         <div id="resume-content">
             <!-- HEADER -->
@@ -254,7 +254,14 @@
             }
         }
 
-        document.addEventListener('DOMContentLoaded', scaleResumeForMobile);
+        // =========================================================================
+        // === THE FIX: Use the 'load' event instead of 'DOMContentLoaded'       ===
+        // =========================================================================
+        // This ensures that all resources (like fonts) are loaded before we 
+        // calculate the element's size, preventing layout issues on initial load.
+        window.addEventListener('load', scaleResumeForMobile);
+        
+        // We still need the resize listener for device rotation.
         window.addEventListener('resize', scaleResumeForMobile);
 
     </script>
