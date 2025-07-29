@@ -1,5 +1,3 @@
-Of course. Here is your updated README with the link to `cv.blakerayvid.com` added as a new badge at the top.
-
 # Blake Rayvid
 
 <p align="left">
