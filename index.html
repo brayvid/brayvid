@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>CV | Blake Rayvid</title>
     <!-- All other meta tags remain the same -->
@@ -218,17 +218,20 @@
             }, 50); 
         }
 
-        // The rest of the JavaScript is correct and remains the same.
         function scaleResumeForMobile() {
             const resumeContainer = document.getElementById('resume-container');
             const resumeContent = document.getElementById('resume-content');
             
             if (!resumeContent.offsetWidth) return;
             
-            const originalWidth = resumeContent.offsetWidth; 
-            const viewportWidth = window.innerWidth;
+            // This is the only line that changes:
+            // We use document.documentElement.clientWidth for a more reliable viewport width.
+            const viewportWidth = document.documentElement.clientWidth;
+            
+            const originalWidth = resumeContent.offsetWidth;
 
             if (viewportWidth < originalWidth) {
+                // The scaling factor is now calculated reliably.
                 const scale = viewportWidth / originalWidth;
                 resumeContent.style.transform = `scale(${scale})`;
                 resumeContent.style.transformOrigin = 'top left';
