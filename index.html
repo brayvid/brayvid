@@ -4,29 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
-    <!-- SEO: Title & Meta Description -->
     <title>CV | Blake Rayvid</title>
+    <!-- All other meta tags remain the same -->
     <meta name="description" content="CV for Blake Rayvid, a data science and software engineering professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta name="author" content="Blake Rayvid">
-    
-    <!-- SEO: Canonical URL to prevent duplicate content issues -->
     <link rel="canonical" href="https://cv.blakerayvid.com/">
-    
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
-
-    <!-- SEO: Open Graph / Facebook / LinkedIn -->
     <meta property="og:title" content="Blake Rayvid - Data Science & Software Engineering Resume">
     <meta property="og:description" content="Data science professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cv.blakerayvid.com/">
     <meta property="og:site_name" content="CV | Blake Rayvid">
-    
-    <!-- SEO: Twitter Card -->
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Blake Rayvid - Data Science & Software Engineering Resume">
     <meta name="twitter:description" content="Data science professional with expertise in applied mathematics, machine learning, and financial analysis.">
-
-    <!-- SEO: JSON-LD Structured Data for Google Rich Results -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org", "@type": "Person", "name": "Blake Rayvid", "email": "mailto:hi@blakerayvid.com", "url": "https://cv.blakerayvid.com",
@@ -34,19 +25,15 @@
       "jobTitle": "Data Scientist", "knowsAbout": ["Data Science", "Machine Learning", "Algorithms", "Optimization", "Python", "JavaScript", "SQL", "MATLAB", "Pandas", "NumPy", "PyTorch", "TensorFlow", "Financial Modeling", "Data Visualization"]
     }
     </script>
-
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-TKVRPHRVEQ"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-TKVRPHRVEQ');
     </script>
 
     
-    <!-- CSS for PDF Layout -->
     <style>
         body {
             background-color: #f0f0f0;
@@ -65,6 +52,11 @@
             color: #000;
             font-size: 9.5pt;
             line-height: 1.4;
+
+            /* === STEP 1: HIDE INITIALLY === */
+            /* This prevents the browser from showing a broken layout before our script runs. */
+            /* 'visibility' is used instead of 'display' so its dimensions can still be calculated. */
+            visibility: hidden;
         }
 
         h1 {
@@ -102,7 +94,14 @@
         @media print {
             body { background-color: #fff; padding: 0; }
             #download-button-container { display: none; }
-            #resume-content, #resume-container { box-shadow: none; margin: 0; transform: none !important; height: auto !important; width: auto !important; }
+            #resume-content, #resume-container { 
+                box-shadow: none; 
+                margin: 0; 
+                transform: none !important; 
+                height: auto !important; 
+                width: auto !important; 
+                visibility: visible !important; /* Ensure it's visible for printing */
+            }
         }
     </style>
 </head>
@@ -112,10 +111,10 @@
         <button id="download-button" onclick="downloadPDF()">Download as PDF</button>
     </div>
 
-    <!-- Wrapper div for scaling -->
     <div id="resume-container">
         <div id="resume-content">
-            <!-- HEADER -->
+            <!-- All your resume HTML content remains exactly the same -->
+             <!-- HEADER -->
             <div style="text-align: center;">
                 <h1 style="font-size: 19pt; font-weight: 600; margin: 0; padding: 0; letter-spacing: 1.2px; line-height: 1;">BLAKE RAYVID</h1>
                 <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: underline;">hi@blakerayvid.com</a></p>
@@ -181,60 +180,44 @@
                 </div>
             </div>
         </div>
-    </div> <!-- End #resume-container -->
+    </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
     <script>
+        // PDF function remains the same, it is already correct.
         function downloadPDF() {
             const element = document.getElementById('resume-content');
             const container = document.getElementById('resume-container');
-            
-            // --- START: FIX FOR PDF SCALING ---
-            
-            // Temporarily store the original transform and height styles
             const originalTransform = element.style.transform;
             const originalContainerHeight = container.style.height;
             
-            // Temporarily remove the transform to ensure the PDF captures the element at its full size.
-            // Also, reset the container's height to allow it to naturally fit the full-size content.
             element.style.transform = 'none';
             container.style.height = 'auto';
-            
-            // --- END: FIX FOR PDF SCALING ---
 
             const opt = {
               margin:       0,
               filename:     'blake-rayvid-cv.pdf',
               enableLinks:  true,
-              html2canvas:  { 
-                  scale: 2, // Renders at 2x resolution for a sharper PDF
-                  useCORS: true 
-              },
-              jsPDF:        { 
-                  unit: 'in', 
-                  format: 'letter', 
-                  orientation: 'portrait' 
-              },
+              html2canvas:  { scale: 2, useCORS: true },
+              jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
               pagebreak:    { mode: 'avoid-all' } 
             };
             
-            // Generate the PDF. The .save() method returns a promise.
             const worker = html2pdf().from(element).set(opt).save();
 
-            // After the promise resolves (PDF is saved), restore the original styles.
-            // This ensures the on-screen display snaps back to its scaled mobile view.
             worker.then(() => {
                 element.style.transform = originalTransform;
                 container.style.height = originalContainerHeight;
             });
         }
 
-        // DYNAMIC SCALING FOR MOBILE VIEW
+        // Scaling logic function also remains the same.
         function scaleResumeForMobile() {
             const resumeContainer = document.getElementById('resume-container');
             const resumeContent = document.getElementById('resume-content');
             
-            const originalWidth = 8.5 * 96; // 8.5 inches at 96 DPI
+            // Using offsetWidth forces the browser to calculate the layout, giving us a reliable value.
+            const originalWidth = resumeContent.offsetWidth; 
             const viewportWidth = window.innerWidth;
 
             if (viewportWidth < originalWidth) {
@@ -243,25 +226,32 @@
                 resumeContent.style.transform = `scale(${scale})`;
                 resumeContent.style.transformOrigin = 'top left';
 
-                // Adjust the container's height to match the scaled content's height
                 const scaledHeight = resumeContent.offsetHeight * scale;
                 resumeContainer.style.height = `${scaledHeight}px`;
 
             } else {
-                // If the viewport is wider, remove all transforms and height adjustments
                 resumeContent.style.transform = 'none';
                 resumeContainer.style.height = 'auto';
             }
         }
 
-        // =========================================================================
-        // === THE FIX: Use the 'load' event instead of 'DOMContentLoaded'       ===
-        // =========================================================================
-        // This ensures that all resources (like fonts) are loaded before we 
-        // calculate the element's size, preventing layout issues on initial load.
-        window.addEventListener('load', scaleResumeForMobile);
+        // === STEP 2: ORCHESTRATE THE INITIAL LAYOUT ===
+        function initializeLayout() {
+            const content = document.getElementById('resume-content');
+
+            // 1. Run our scaling logic. This happens while the element is still invisible,
+            // but its dimensions are correct because the browser has rendered it in memory.
+            scaleResumeForMobile();
+
+            // 2. Now that the correct scale transform is applied, make the element visible.
+            // The user only sees the final, perfect layout.
+            content.style.visibility = 'visible';
+        }
+
+        // Wait for the entire page and all resources (fonts!) to load fully.
+        window.addEventListener('load', initializeLayout);
         
-        // We still need the resize listener for device rotation.
+        // Continue to listen for resize events for device rotation.
         window.addEventListener('resize', scaleResumeForMobile);
 
     </script>
