@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- SEO: Title & Meta Description -->
-    <title>Blake Rayvid | CV</title>
+    <title>CV | Blake Rayvid</title>
     <meta name="description" content="CV for Blake Rayvid, a data science and software engineering professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta name="author" content="Blake Rayvid">
     
@@ -19,7 +19,7 @@
     <meta property="og:description" content="Data science professional with expertise in applied mathematics, machine learning, and financial analysis.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://cv.blakerayvid.com/">
-    <meta property="og:site_name" content="Blake Rayvid's Resume">
+    <meta property="og:site_name" content="CV | Blake Rayvid">
     
     <!-- SEO: Twitter Card -->
     <meta name="twitter:card" content="summary">
@@ -109,7 +109,7 @@
 <body>
 
     <div id="download-button-container">
-        <button id="download-button" onclick="downloadPDF()">Download as PDF</button>
+        <button id="download-button" onclick="downloadPDF()">Download PDF</button>
     </div>
 
     <!-- NEW: Wrapper div for scaling -->
@@ -181,69 +181,69 @@
                 </div>
             </div>
         </div>
-    </div> <!-- End #resume-content -->
+    </div> <!-- End #resume-container -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
     <script>
         function downloadPDF() {
             const element = document.getElementById('resume-content');
+            const container = document.getElementById('resume-container');
             
             // --- START: FIX FOR PDF SCALING ---
             
-            // Temporarily store the original transform style from mobile view
+            // Temporarily store the original transform and height styles
             const originalTransform = element.style.transform;
+            const originalContainerHeight = container.style.height;
             
-            // Temporarily remove the transform to ensure the PDF captures the element at its full size
+            // Temporarily remove the transform to ensure the PDF captures the element at its full size.
+            // Also, reset the container's height to allow it to naturally fit the full-size content.
             element.style.transform = 'none';
+            container.style.height = 'auto';
             
             // --- END: FIX FOR PDF SCALING ---
 
             const opt = {
-              margin:       0, // The padding is in your CSS, so no margin is needed here.
+              margin:       0,
               filename:     'blake-rayvid-cv.pdf',
               enableLinks:  true,
               html2canvas:  { 
                   scale: 2, // Renders at 2x resolution for a sharper PDF
-                  useCORS: true // Important if you have external images/resources
+                  useCORS: true 
               },
               jsPDF:        { 
                   unit: 'in', 
                   format: 'letter', 
                   orientation: 'portrait' 
               },
-              // This mode ensures your content, which is designed to be one page, stays on one page.
               pagebreak:    { mode: 'avoid-all' } 
             };
             
             // Generate the PDF. The .save() method returns a promise.
             const worker = html2pdf().from(element).set(opt).save();
 
-            // After the promise resolves (PDF is saved), restore the original transform.
+            // After the promise resolves (PDF is saved), restore the original styles.
             // This ensures the on-screen display snaps back to its scaled mobile view.
             worker.then(() => {
                 element.style.transform = originalTransform;
+                container.style.height = originalContainerHeight;
             });
         }
 
-        // *** NEW SCRIPT FOR DYNAMIC SCALING ***
+        // DYNAMIC SCALING FOR MOBILE VIEW
         function scaleResumeForMobile() {
             const resumeContainer = document.getElementById('resume-container');
             const resumeContent = document.getElementById('resume-content');
             
-            // The original width of the resume in pixels (8.5 inches * 96 DPI)
-            const originalWidth = 816; 
+            const originalWidth = 8.5 * 96; // 8.5 inches at 96 DPI
             const viewportWidth = window.innerWidth;
 
             if (viewportWidth < originalWidth) {
                 const scale = viewportWidth / originalWidth;
                 
-                // Apply the scale transform to the content
                 resumeContent.style.transform = `scale(${scale})`;
-                // Set the origin to the top left corner
                 resumeContent.style.transformOrigin = 'top left';
 
                 // Adjust the container's height to match the scaled content's height
-                // This prevents the page from having an enormous empty space at the bottom
                 const scaledHeight = resumeContent.offsetHeight * scale;
                 resumeContainer.style.height = `${scaledHeight}px`;
 
@@ -254,7 +254,6 @@
             }
         }
 
-        // Run the function on initial load and whenever the window is resized
         document.addEventListener('DOMContentLoaded', scaleResumeForMobile);
         window.addEventListener('resize', scaleResumeForMobile);
 
