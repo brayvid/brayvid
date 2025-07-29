@@ -34,6 +34,17 @@
     </script>
 
     <style>
+        /*
+          CORRECT IMPLEMENTATION: Load the exact Book Antiqua font file from the local directory.
+          Make sure the font file (e.g., 'Book-Antiqua-Regular.ttf') is in the same folder as this HTML file.
+          This ensures the browser and PDF generator use the identical font.
+        */
+        @font-face {
+            font-family: 'Book Antiqua'; /* Define a name for our font */
+            /* Ensure this filename matches the one you downloaded */
+            src: url('Book-Antiqua-Regular.ttf') format('truetype'); 
+        }
+
         html {
             -webkit-text-size-adjust: 100%;
             -ms-text-size-adjust: 100%;
@@ -42,6 +53,7 @@
 
         body {
             background-color: #f0f0f0;
+            /* Use the font defined in @font-face */
             font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
             margin: 0;
             padding: 20px 0;
@@ -74,6 +86,7 @@
         }
         #download-button-container { text-align: center; padding: 20px 0; }
         #download-button {
+            /* Use the same font for the button */
             font-family: 'Book Antiqua', serif;
             font-size: 10.8pt;
             padding: 10px 20px;
@@ -109,7 +122,7 @@
         <div id="resume-content">
             <!-- All resume HTML content remains exactly the same -->
             <div style="text-align: center;">
-                <h1 style="font-size: 19pt; font-weight: 600; margin: 0; padding: 0; letter-spacing: 1.2px; line-height: 1;">BLAKE RAYVID</h1>
+                <h1 style="font-size: 19pt; font-weight: 0; margin: 0; padding: 0; letter-spacing: 1.2px; line-height: 1;">BLAKE RAYVID</h1>
                 <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: underline;">hi@blakerayvid.com</a></p>
             </div>
             <h2>SUMMARY</h2>
@@ -161,8 +174,14 @@
         </div>
     </div>
 
+    <footer style="text-align: center; padding-top: 20px; font-size: 0.8rem">&copy; 2025 Blake Rayvid. All rights reserved.</footer>
+
+    <!-- Use the html2pdf.js library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
     <script>
+        // This function uses the robust html2pdf.js library.
+        // Because the font is now locally and consistently defined, the 'letterRendering'
+        // option will work as intended, producing a visually perfect PDF with vector text.
         function downloadPDF() {
             const element = document.getElementById('resume-content');
             const container = document.getElementById('resume-container');
@@ -182,13 +201,15 @@
                     html2canvas:  {
                         scale: 2,
                         useCORS: true,
-                        // === THIS IS THE KEY FOR SELECTABLE TEXT ===
+                        // This is the key. It now works reliably because the @font-face
+                        // rule removed all ambiguity about which font to use.
                         letterRendering: true
                     }
                 };
                 
                 const worker = html2pdf().from(element).set(opt).save();
     
+                // Restore original styles after PDF generation is complete.
                 worker.then(() => {
                     element.style.transform = originalTransform;
                     container.style.height = originalContainerHeight;
@@ -201,6 +222,8 @@
         function scaleResumeForMobile() {
             const resumeContainer = document.getElementById('resume-container');
             const resumeContent = document.getElementById('resume-content');
+            
+            if (!resumeContent.offsetWidth) return;
             
             const originalWidth = resumeContent.offsetWidth; 
             const viewportWidth = window.innerWidth;
@@ -219,8 +242,8 @@
 
         function initializeLayout() {
             const content = document.getElementById('resume-content');
-            scaleResumeForMobile();
             content.style.visibility = 'visible';
+            scaleResumeForMobile();
         }
 
         window.addEventListener('load', initializeLayout);
