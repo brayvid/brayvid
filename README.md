@@ -33,7 +33,7 @@ C++, MATLAB, Mathematica, Shell, LaTeX, Markdown
 
 | Project | Description | Technologies |
 |---|---|---|
-| **[soap](https://github.com/brayvid/soap)** | A new polling platform designed to improve online political discourse. | JavaScript, Socket.io, TensorFlow |
+| **[soap](https://github.com/brayvid/soap)** | A new polling platform designed to improve online political discourse with one-word submissions. | JavaScript, Socket.io, TensorFlow, spaCy |
 | **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines from RSS feeds using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, Netlify |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. | Python, Flask, yfinance, pandas |
 | **[routecat](https://github.com/brayvid/routecat)** | A multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Netlify, HTML/CSS |
