@@ -18,17 +18,17 @@ Developer with an applied math background and expertise in data science, finance
 
 ### Languages & Tools
 
-**Data Science & Machine Learning:**
+**Data Science & ML:**
 Python, Pandas, NumPy, Matplotlib, Scikit-Learn, PyTorch, TensorFlow, Jupyter, NLTK, spaCy
 
 **Web Development:**
-JavaScript, Flask, HTML/CSS, Netlify, Railway, Socket.io, p5.js, d3.js, chart.js
+JavaScript, HTML/CSS, Flask, Railway, Socket.io, Netlify, p5.js, d3.js, chart.js, Dash, Plotly
 
 **Databases:**
 PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
 
 **Other:**
-C++, MATLAB, Mathematica, Shell, LaTeX, Markdown
+C++, Java, MATLAB, Mathematica, Shell, LaTeX, Markdown
 
 ---
 
@@ -36,7 +36,9 @@ C++, MATLAB, Mathematica, Shell, LaTeX, Markdown
 
 | Project | Description | Technologies |
 |---|---|---|
+| **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, Finance, Machine Learning |
 | **[soap](https://github.com/brayvid/soap)** | A new polling platform designed to improve online political discourse with one-word submissions. | JavaScript, Socket.io, TensorFlow, spaCy |
+| **[soap-dash](https://github.com/brayvid/soap-dash)** | Data dashboard for the Soap polling platform. | Python, Dash, Plotly |
 | **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines from RSS feeds using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, Netlify |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. | Python, Flask, yfinance, pandas |
 | **[routecat](https://github.com/brayvid/routecat)** | A multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Netlify, HTML/CSS |
@@ -47,4 +49,4 @@ C++, MATLAB, Mathematica, Shell, LaTeX, Markdown
 
 ---
 
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact)](https://github.com/brayvid)
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact&theme=dark">
