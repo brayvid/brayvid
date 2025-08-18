@@ -47,7 +47,7 @@ VSCode, Jupyter, Git, Railway, Netlify
 | **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines from RSS feeds using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, HTML/CSS/JS |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. |Flask, yfinance, pandas, matplotlib |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, QuantConnect, finance |
-| **[brayvid.github.io](https://github.com/brayvid/brayvid.github.io)** | Interactive visualizations of math and science problems. | HTML/CSS/JS, p5.js, physics, simulation, education |
+| **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | HTML/CSS/JS, p5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | HTML/CSS/JS, Netlify, Google Maps JS API, optimization |
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | An Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY |
 | **[skyrim-alchemy-optimizer](https://github.com/brayvid/skyrim-alchemy-optimizer)** | A tool to maximize alchemy profitability in Skyrim using integer linear programming. | Python, SciPy |
