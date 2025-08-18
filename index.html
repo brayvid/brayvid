@@ -86,6 +86,16 @@
         }
         #download-button:hover { background-color: #dcdcdc; }
         
+        /* This ensures the link is always black and underlined, overriding browser defaults for visited links. */
+        .resume-link,
+        .resume-link:link,
+        .resume-link:visited,
+        .resume-link:hover,
+        .resume-link:active {
+            color: #000;
+            text-decoration: underline;
+        }
+
         footer {
             font-family: Helvetica, Arial, sans-serif;
             text-align: center;
@@ -173,17 +183,17 @@
         <h2>PROFESSIONAL EXPERIENCE</h2>
         <hr>
         <table style="width: 100%; border-collapse: collapse;"><tbody>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2025 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>Business Analyst</strong>, Stealth Fintech – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Engineered and backtested trading strategies using ML forecasts to enhance portfolio return predictability.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Conducted quantitative analysis of market data to refine asset allocation models and increase strategy efficiency.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Developed full-stack dashboards for real-time strategy monitoring, reducing decision latency.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Dec 2022 – Jul 2025</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>Stagehand</strong>, The Metropolitan Opera – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Orchestrated time-critical logistics for 100+ stage productions, streamlining backstage operations and equipment flow.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Aug 2019 – Dec 2022</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>Delivery Driver & Route Optimization Developer</strong>, Insomnia Cookies – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Designed a clustering-based TSP route optimizer in Python, cutting delivery times by 18%.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Analyzed GPS and traffic data to streamline multi-driver dispatch and routing.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>JavaScript Developer</strong>, City College of New York – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Built interactive educational apps in JavaScript (D3.js) to visualize complex math and physics concepts.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Engineered physics simulations adopted by faculty for core undergraduate instruction.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2025 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>Business Analyst</strong>, Stealth Fintech – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Engineered and backtested trading strategies using ML forecasts to enhance portfolio return predictability.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Conducted quantitative analysis of market data to refine allocation models and increase strategy efficiency.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Developed full-stack dashboards for real-time strategy monitoring, reducing decision latency.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Dec 2022 – Jul 2025</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>Stagehand</strong>, The Metropolitan Opera – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Orchestrated logistics for 100+ stage productions, streamlining backstage operations and equipment flow.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Aug 2019 – Dec 2022</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>Delivery Driver & Route Optimization Developer</strong>, Insomnia Cookies – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Designed a <a class="resume-link" href="https://blakerayvid.com/2022/05/01/routecat/"target="_blank" rel="noopener noreferrer">clustering-based TSP route optimizer</a> in Python, cutting delivery times by 18%.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Analyzed GPS and traffic data to streamline multi-driver dispatch and routing.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><strong>JavaScript Developer</strong>, City College of New York – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Built <a href="https://blakerayvid.com/2019/04/04/science-sims/" target="_blank" rel="noopener noreferrer" class="resume-link">interactive educational apps</a> in JavaScript (p5.js) to visualize complex math and physics concepts.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Engineered physics simulations adopted by faculty for core undergraduate instruction.</p></td></tr>
         </tbody></table>
         <h2>PROJECTS</h2>
         <hr>
-        <p style="margin: 0 0 3px 0;"><strong>Sentiment Classifier:</strong> Engineered a tweet sentiment classifier (Logistic Regression, Neural Nets) achieving 83% accuracy.</p>
-        <p style="margin: 0 0 3px 0;"><strong>Polling Platform:</strong> Built a full-stack platform (Flask, JS) to analyze 4,000+ real-time voter inputs for trend analysis.</p>
-        <p style="margin: 0 0 3px 0;"><strong>Stock Comparison Tool:</strong> Created a Python tool to benchmark equity portfolios, visualizing performance with Matplotlib.</p>
-        <p style="margin: 0 0 3px 0;"><strong>Personalized News Reader:</strong> Developed a custom news aggregator using the Gemini API and a topic-weighting algorithm.</p>
+        <p style="margin: 0 0 3px 0;"><strong>Sentiment Classifier:</strong> Engineered a <a href="https://blakerayvid.com/2024/07/12/sentiment-classifier/" class="resume-link" target="_blank" rel="noopener noreferrer">tweet sentiment classifier</a> (Logistic Regression, Neural Nets) achieving 83% accuracy.</p>
+        <p style="margin: 0 0 3px 0;"><strong>Polling Platform:</strong> Built a <a href="https://blakerayvid.com/2025/05/04/soap-social-polling/" class="resume-link" target="_blank" rel="noopener noreferrer">full-stack polling platform</a> (Flask, JS) to analyze 5,000+ real-time voter inputs for trend analysis.</p>
+        <p style="margin: 0 0 3px 0;"><strong>Stock Comparison Tool:</strong> Created a <a href="https://blakerayvid.com/2025/06/01/compare-stock-returns/" class="resume-link" target="_blank" rel="noopener noreferrer">Python tool to benchmark portfolio returns</a>, visualizing performance with Matplotlib.</p>
+        <p style="margin: 0 0 3px 0;"><strong>Personalized News Reader:</strong> Developed a <a href="https://blakerayvid.com/2025/04/19/based-news-reader/" class="resume-link" target="_blank" rel="noopener noreferrer">custom news aggregator</a> using the Gemini API and a topic-weighting algorithm.</p>
         <h2>EDUCATION</h2>
         <hr>
         <table style="width: 100%; border-collapse: collapse;"><tbody>
@@ -200,9 +210,9 @@
         <hr>
         <div style="width: 100%; display: table;">
             <div style="display: table-row;">
-                <div style="display: table-cell; width: 33%; text-align: left;"><a href="https://blakerayvid.com" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">blakerayvid.com</a></div>
-                <div style="display: table-cell; width: 34%; text-align: center;"><a href="https://www.linkedin.com/in/blake-rayvid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">linkedin.com/in/blake-rayvid</a></div>
-                <div style="display: table-cell; width: 33%; text-align: right;"><a href="https://github.com/brayvid" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: underline;">github.com/brayvid</a></div>
+                <div style="display: table-cell; width: 33%; text-align: left;"><a href="https://blakerayvid.com" style="color: inherit; text-decoration: underline;">blakerayvid.com</a></div>
+                <div style="display: table-cell; width: 34%; text-align: center;"><a href="https://www.linkedin.com/in/blake-rayvid" style="color: inherit; text-decoration: underline;">linkedin.com/in/blake-rayvid</a></div>
+                <div style="display: table-cell; width: 33%; text-align: right;"><a href="https://github.com/brayvid" style="color: inherit; text-decoration: underline;">github.com/brayvid</a></div>
             </div>
         </div>
     </div>
