@@ -11,8 +11,7 @@
     <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
-
-Developer with an applied math background and expertise in data science, finance and physics, answering real-world questions through computation, optimization and visualization.
+Developer with 15+ years in computational problem-solving, specializing in machine learning, financial modeling, and algorithm design.
 
 ---
 
