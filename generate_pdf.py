@@ -15,7 +15,7 @@ try:
             # Render the HTML template, passing a flag to hide the download button.
             html_string = render_template('index.html', is_pdf_render=True)
 
-    base_url = os.path.join(app.root_path, 'static')
+    base_url = app.root_path  # This will be '/app' inside the container
 
     # Define the PDF page layout.
     page_layout_css = CSS(string="@page { size: letter; margin: 0.02in; }")
