@@ -14,5 +14,6 @@ def on_starting(server):
 # Gunicorn settings
 bind = f"0.0.0.0:{os.environ.get('PORT', 8000)}"
 workers = 2
-# Increase the timeout, as PDF generation can be slow on startup.
 timeout = 180
+# NEW: Give workers a long time to boot, as they wait for the master process.
+worker_boot_timeout = 240

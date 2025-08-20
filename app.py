@@ -53,6 +53,14 @@ def download_pdf():
     
     return response.make_conditional(request)
 
+@app.route('/health')
+def health_check():
+    """
+    A simple healthcheck endpoint that returns a 200 OK.
+    This is used by the platform to confirm the container is live.
+    """
+    return {"status": "ok"}, 200
+
 if __name__ == '__main__':
     # For local development, we still need to trigger the generation.
     # The app_context is needed for app-level operations.
