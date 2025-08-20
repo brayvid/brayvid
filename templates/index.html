@@ -8,8 +8,8 @@
     <meta name="description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
     <meta name="author" content="Blake Rayvid">
     <link rel="canonical" href="https://cv.blakerayvid.com/">
-    <!-- MODIFIED: Use url_for for static assets -->
-    <link rel="icon" type="image/x-x-icon" href="{{ url_for('static', filename='src/favicon.ico') }}">
+    <!-- Use url_for for static assets -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='src/favicon.ico') }}">
     <meta property="og:title" content="Data Science CV | Blake Rayvid">
     <meta property="og:description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
     <meta property="og:type" content="website">
@@ -28,13 +28,11 @@
     <style>
         @font-face {
             font-family: 'Book Antiqua';
-            /* MODIFIED: Use url_for for static assets */
             src: local('Book Antiqua'), url("{{ url_for('static', filename='src/bka.ttf') }}") format('truetype');
             font-weight: normal;
         }
         @font-face {
             font-family: 'Book Antiqua';
-             /* MODIFIED: Use url_for for static assets */
             src: local('Book Antiqua Bold'), url("{{ url_for('static', filename='src/bka-bold.ttf') }}") format('truetype');
             font-weight: bold;
         }
@@ -168,7 +166,7 @@
 </head>
 <body>
 
-    <!-- MODIFIED: Conditionally render button and footer so they don't appear in the PDF -->
+    <!-- Conditionally render button and footer so they don't appear in the PDF -->
     {% if not is_pdf_render %}
     <div id="download-button-container">
         <button id="download-button" onclick="downloadPDF()">Download PDF</button>
@@ -177,7 +175,7 @@
 
 <div id="resume-container">
     <div id="resume-content">
-        <!-- The entire resume content remains unchanged -->
+
         <div style="text-align: center;">
             <h1>BLAKE RAYVID</h1>
             <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: underline;">hi@blakerayvid.com</a></p>
@@ -236,7 +234,7 @@
     <footer>&copy; 2025 <a href="https://blakerayvid.com">Blake Rayvid</a>. All rights reserved.</footer>
     {% endif %}
 
-    <!-- MODIFIED: Removed html2pdf.js script tag -->
+
     <script>
         // MODIFIED: This function now simply navigates to the backend PDF generation endpoint.
         function downloadPDF() {

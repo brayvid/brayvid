@@ -29,6 +29,6 @@ def health_check():
     return {"status": "ok"}, 200
 
 if __name__ == '__main__':
-    # For local testing, you would run `python generate_pdf.py` first
+    # For local testing, run `python generate_pdf.py` first
     # to create the PDF file before running this server.
     app.run(debug=True)
