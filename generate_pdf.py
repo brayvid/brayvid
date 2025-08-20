@@ -3,11 +3,8 @@ import os
 from flask import Flask, render_template
 from weasyprint import HTML, CSS
 
-# Create a minimal Flask app instance just for rendering the template
 app = Flask(__name__)
 
-# Ensure the root_path is correctly set for the template loader
-# (usually handles itself if script is at root, but explicit is safer)
 app.root_path = os.path.dirname(os.path.abspath(__file__))
 
 print("Starting PDF generation during Docker build...")
@@ -18,8 +15,6 @@ try:
             # Render the HTML template, passing a flag to hide the download button.
             html_string = render_template('index.html', is_pdf_render=True)
 
-    # base_url is crucial for WeasyPrint to find static files like your fonts.
-    # It must be an absolute path within the container.
     base_url = os.path.join(app.root_path, 'static')
 
     # Define the PDF page layout.
