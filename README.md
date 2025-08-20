@@ -24,7 +24,7 @@ Python, JavaScript, C++, Java, Shell
 Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, spaCy
 
 **Web Development:**
-HTML/CSS, Node/Express, Flask, Socket.io, p5.js, d3.js, chart.js
+HTML/CSS, Node/Express, Flask, Next.js, Socket.io, d3.js, p5.js, chart.js
 
 **Databases:**
 PostgreSQL, MySQL, SQLite, MongoDB, SQLAlchemy
@@ -41,13 +41,13 @@ VSCode, Jupyter, Git, Railway, Netlify
 
 | Project | Description | Technologies |
 |---|---|---|
-| **[soap](https://github.com/brayvid/soap)** | A new polling platform designed to improve online political discourse with one-word submissions. | Node/Express, Socket.io, TensorFlow, d3.js |
+| **[soap](https://github.com/brayvid/soap)** | A new polling platform designed to improve online political discourse with one-word submissions. | Node/Express, Next.js, Socket.io, TensorFlow, d3.js |
 | **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap polling platform. | Flask, JavaScript, SQL, NLTK, spaCy |
 | **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines from RSS feeds using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, HTML/CSS/JS |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. |Flask, yfinance, pandas, matplotlib |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, QuantConnect, finance |
-| **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | HTML/CSS/JS, p5.js, physics, simulation, education |
-| **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | HTML/CSS/JS, Netlify, Google Maps JS API, optimization |
+| **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, p5.js, physics, simulation, education |
+| **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | An Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY |
 | **[skyrim-alchemy-optimizer](https://github.com/brayvid/skyrim-alchemy-optimizer)** | A tool to maximize alchemy profitability in Skyrim using integer linear programming. | Python, SciPy |
 ---
