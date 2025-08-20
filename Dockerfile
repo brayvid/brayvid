@@ -1,4 +1,4 @@
-# Dockerfile (relevant section)
+# Dockerfile
 
 FROM python:3.11-slim
 
@@ -11,5 +11,3 @@ RUN apt-get update && apt-get install -y \
     libgdk-pixbuf-xlib-2.0-0 \
     --no-install-recommends && \
     rm -rf /var/lib/apt/lists/*
-
-# ... rest of your Dockerfile remains the same ...
