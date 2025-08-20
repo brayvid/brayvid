@@ -12,12 +12,15 @@ pdf_cache = None
 def generate_and_cache_pdf():
     """
     Generates the PDF and stores it in the global pdf_cache variable.
-    This function will be called by our Gunicorn hook.
+    This function will be called by our Gunicorn hook or for local dev.
     """
     global pdf_cache
     print("Pre-warming cache: Generating PDF at startup...")
     try:
-        html_string = render_template('index.html', is_pdf_render=True)
+        # We need to create a request context for url_for() to work.
+        with app.test_request_context():
+            html_string = render_template('index.html', is_pdf_render=True)
+        
         base_url = os.path.join(app.root_path, 'static')
         page_layout_css = CSS(string="@page { size: letter; margin: 0.02in; }")
         
@@ -51,7 +54,8 @@ def download_pdf():
     return response.make_conditional(request)
 
 if __name__ == '__main__':
-    # For local development, we still need to trigger the generation
+    # For local development, we still need to trigger the generation.
+    # The app_context is needed for app-level operations.
     with app.app_context():
         generate_and_cache_pdf()
     app.run(debug=True)
