@@ -9,7 +9,7 @@
     <meta name="author" content="Blake Rayvid">
     <link rel="canonical" href="https://cv.blakerayvid.com/">
     <!-- MODIFIED: Use url_for for static assets -->
-    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='src/favicon.ico') }}">
+    <link rel="icon" type="image/x-x-icon" href="{{ url_for('static', filename='src/favicon.ico') }}">
     <meta property="og:title" content="Data Science CV | Blake Rayvid">
     <meta property="og:description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
     <meta property="og:type" content="website">
@@ -27,15 +27,15 @@
     </script>
     <style>
         @font-face {
-            font-family: 'bka';
+            font-family: 'Book Antiqua';
             /* MODIFIED: Use url_for for static assets */
-            src: url("{{ url_for('static', filename='src/bka.ttf') }}") format('truetype');
+            src: local('Book Antiqua'), url("{{ url_for('static', filename='src/bka.ttf') }}") format('truetype');
             font-weight: normal;
         }
         @font-face {
-            font-family: 'bka';
+            font-family: 'Book Antiqua';
              /* MODIFIED: Use url_for for static assets */
-            src: url("{{ url_for('static', filename='src/bka-bold.ttf') }}") format('truetype');
+            src: local('Book Antiqua Bold'), url("{{ url_for('static', filename='src/bka-bold.ttf') }}") format('truetype');
             font-weight: bold;
         }
 
@@ -47,7 +47,7 @@
 
         body {
             background-color: #f0f0f0;
-            font-family: 'bka', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
+            font-family: 'Book Antiqua', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
             margin: 0;
             padding: 20px 0;
             transition: background-color 0.3s ease;
@@ -233,7 +233,9 @@
 </div>
 
     {% if not is_pdf_render %}
-    <footer>&copy; 2025 <a href="https://blakerayvid.com">Blake Rayvid</a>. All rights reserved.</footer>
+    <div id="download-button-container">
+        <button id="download-button" onclick="downloadPDF()">Download PDF</button>
+    </div>
     {% endif %}
 
     <!-- MODIFIED: Removed html2pdf.js script tag -->
