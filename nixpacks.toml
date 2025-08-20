@@ -1,11 +1,8 @@
 # nixpacks.toml
 
-# Specify that we are using the Python provider
 providers = ["python"]
 
-# Define the setup phase, where we can install system packages
 [phases.setup]
-# Use 'aptPkgs' to list Debian/Ubuntu packages to install
 aptPkgs = [
   "libpango-1.0-0",
   "libcairo2",
