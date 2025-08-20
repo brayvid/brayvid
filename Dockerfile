@@ -1,10 +1,6 @@
 # Use a supported Python slim image
 FROM python:3.11-slim
 
-# Set environment variables for better logging
-ENV PYTHONUNBUFFERED=1
-ENV GUNICORN_CMD_ARGS="--bind=0.0.0.0:$PORT --workers=2 --timeout=120"
-
 # Set the working directory
 WORKDIR /app
 
@@ -25,10 +21,8 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # --- Build-Time Step: Generate the PDF ---
-# This runs our script to create the static PDF file inside the image
 RUN python generate_pdf.py
 
 # --- Runtime Step: Define the command to start the server ---
-# This CMD line replaces the Procfile and gunicorn.conf.py
-# Railway will automatically substitute the $PORT variable.
-CMD ["gunicorn", "app:app"]
+# This command is executed by a shell, so $PORT is correctly expanded at runtime.
+CMD gunicorn --bind=0.0.0.0:$PORT --workers=2 --timeout=120 app:app
