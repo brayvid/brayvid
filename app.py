@@ -6,81 +6,72 @@ from weasyprint import HTML, CSS
 app = Flask(__name__)
 
 # --- Caching Mechanism ---
-# Global variables to hold the cached PDF and track the template's modification time.
 pdf_cache = None
-template_last_modified = 0
+# We no longer need template_last_modified for the pre-warming strategy,
+# as a new deploy will always regenerate the PDF.
 # --- End Caching Mechanism ---
+
+# --- Pre-warming the Cache ---
+def generate_and_cache_pdf():
+    """
+    A function to generate the PDF and store it in the global cache.
+    This is called ONCE when the application starts.
+    """
+    global pdf_cache
+    print("Pre-warming cache: Generating PDF at startup...")
+    try:
+        # Render the HTML template for the PDF
+        html_string = render_template('index.html', is_pdf_render=True)
+        base_url = os.path.join(app.root_path, 'static')
+        page_layout_css = CSS(string="@page { size: letter; margin: 0.02in; }")
+        
+        html_obj = HTML(string=html_string, base_url=base_url)
+        pdf_bytes = html_obj.write_pdf(stylesheets=[page_layout_css])
+        
+        # Store the generated PDF in our global variable
+        pdf_cache = pdf_bytes
+        print("PDF generated and cached successfully.")
+    except Exception as e:
+        print(f"FATAL: Could not generate PDF at startup: {e}")
+        # If this fails, the app shouldn't start.
+        # pdf_cache will remain None.
+        
+# --- End Pre-warming the Cache ---
+
 
 @app.route('/')
 def resume():
     """Renders the HTML resume page."""
-    # This route is fast, but for consistency, we can also add caching headers here.
     response = make_response(render_template('index.html'))
-    # Set a short cache time for the HTML page itself.
-    response.headers['Cache-Control'] = 'public, max-age=600' # Cache for 10 minutes
+    response.headers['Cache-Control'] = 'public, max-age=600'
     return response
+
 
 @app.route('/download-pdf')
 def download_pdf():
     """
-    Generates and serves the PDF version of the resume, with caching.
-    The PDF is regenerated only if the underlying HTML template has changed.
+    Serves the pre-cached PDF.
     """
-    global pdf_cache, template_last_modified
+    # If caching failed at startup, we should return an error.
+    if pdf_cache is None:
+        return "Error: PDF is not available, check application logs.", 500
 
-    try:
-        template_path = os.path.join(app.root_path, 'templates', 'index.html')
-        current_mtime = os.path.getmtime(template_path)
+    response = make_response(pdf_cache)
+    
+    response.headers['Content-Type'] = 'application/pdf'
+    response.headers['Content-Disposition'] = 'attachment; filename=blake-rayvid-cv.pdf'
+    response.headers['Cache-Control'] = 'public, max-age=3600'
+    
+    etag = hashlib.md5(pdf_cache).hexdigest()
+    response.set_etag(etag)
+    
+    return response.make_conditional(request)
 
-        # Cache Invalidation Check:
-        # If the template file has been modified since the last cache, regenerate the PDF.
-        if current_mtime > template_last_modified:
-            print("Cache miss: Template has changed. Regenerating PDF...")
-            
-            # Render the HTML template, passing a flag to hide the download button.
-            html_string = render_template('index.html', is_pdf_render=True)
-
-            # The base_url is crucial for WeasyPrint to find static files like your fonts.
-            base_url = os.path.join(app.root_path, 'static')
-            
-            # Define the PDF page layout.
-            page_layout_css = CSS(string="@page { size: letter; margin: 0.02in; }")
-            
-            html_obj = HTML(string=html_string, base_url=base_url)
-            
-            # Generate the PDF bytes and store them in our in-memory cache.
-            pdf_bytes = html_obj.write_pdf(stylesheets=[page_layout_css])
-            pdf_cache = pdf_bytes
-            
-            # Update the last modified time.
-            template_last_modified = current_mtime
-        else:
-            print("Cache hit: Serving PDF from memory.")
-
-        # At this point, pdf_cache holds the correct PDF bytes.
-        response = make_response(pdf_cache)
-        
-        # --- Set HTTP Headers for SEO and Performance ---
-        
-        # 1. Content-Type and Disposition
-        response.headers['Content-Type'] = 'application/pdf'
-        response.headers['Content-Disposition'] = 'attachment; filename=blake-rayvid-cv.pdf'
-        
-        # 2. Cache-Control: Tell browsers/proxies to cache for 1 hour (3600 seconds).
-        response.headers['Cache-Control'] = 'public, max-age=3600'
-        
-        # 3. ETag: A unique identifier for this version of the file.
-        #    We generate it by hashing the PDF content.
-        etag = hashlib.md5(pdf_cache).hexdigest()
-        response.set_etag(etag)
-        
-        # Let Flask handle the `If-None-Match` request header.
-        # If it matches our ETag, Flask will automatically return a 304 Not Modified status.
-        return response.make_conditional(request)
-
-    except Exception as e:
-        # Provide a helpful error message if something goes wrong.
-        return f"An error occurred during PDF generation: {e}", 500
+# This block ensures the pre-warming only happens when running with Gunicorn
+# and not during other Flask CLI commands.
+with app.app_context():
+    generate_and_cache_pdf()
 
 if __name__ == '__main__':
+    # The debug server will also use the pre-warmed cache.
     app.run(debug=True)
