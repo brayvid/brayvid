@@ -43,7 +43,7 @@ VSCode, Jupyter, Git, Railway, Netlify
 |---|---|---|
 | **[soap](https://github.com/brayvid/soap)** | A new polling platform designed to improve online political discourse with one-word submissions. | Node/Express, Next.js, Socket.io, TensorFlow, d3.js |
 | **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap polling platform. | Flask, JavaScript, SQL, NLTK, spaCy |
-| **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines from RSS feeds using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, HTML/CSS/JS |
+| **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines from RSS feeds using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, JavaScript |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. |Flask, yfinance, pandas, matplotlib |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, QuantConnect, finance |
 | **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, p5.js, physics, simulation, education |
