@@ -8,7 +8,8 @@
     <meta name="description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
     <meta name="author" content="Blake Rayvid">
     <link rel="canonical" href="https://cv.blakerayvid.com/">
-    <link rel="icon" type="image/x-icon" href="/src/favicon.ico">
+    <!-- MODIFIED: Use url_for for static assets -->
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='src/favicon.ico') }}">
     <meta property="og:title" content="Data Science CV | Blake Rayvid">
     <meta property="og:description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
     <meta property="og:type" content="website">
@@ -27,7 +28,15 @@
     <style>
         @font-face {
             font-family: 'bka';
-            src: url('src/bka.ttf') format('truetype'); 
+            /* MODIFIED: Use url_for for static assets */
+            src: url("{{ url_for('static', filename='src/bka.ttf') }}") format('truetype');
+            font-weight: normal;
+        }
+        @font-face {
+            font-family: 'bka';
+             /* MODIFIED: Use url_for for static assets */
+            src: url("{{ url_for('static', filename='src/bka-bold.ttf') }}") format('truetype');
+            font-weight: bold;
         }
 
         html {
@@ -38,7 +47,6 @@
 
         body {
             background-color: #f0f0f0;
-            /* Use the font defined in @font-face */
             font-family: 'bka', Palatino, 'Palatino Linotype', 'Palatino LT STD', Georgia, serif;
             margin: 0;
             padding: 20px 0;
@@ -60,15 +68,17 @@
 
         h1 {
             font-size: 19pt;
+            font-weight: bold;
             margin: 0;
             padding: 0;
-            letter-spacing: 1px;
+            letter-spacing: 1.2px;
             line-height: 1;
         }
         h2 {
             font-size: 10.8pt;
+            font-weight: bold;
             letter-spacing: 1.1px;
-            margin: 4px 0 0 0;
+            margin: 0 0 0 0;
         }
         hr {
             border: none;
@@ -77,7 +87,6 @@
         }
         #download-button-container { text-align: center; padding-top: 20px; padding-bottom:30px; padding-left:0px; padding-right:0px; }
         #download-button {
-            /* Use the same font for the button */
             font-family: Helvetica, Arial, sans-serif;
             font-size: 10.8pt;
             padding: 10px 20px;
@@ -90,7 +99,6 @@
         }
         #download-button:hover { background-color: #dcdcdc; }
         
-        /* This ensures the link is always black and underlined, overriding browser defaults for visited links. */
         .resume-link,
         .resume-link:link,
         .resume-link:visited,
@@ -103,26 +111,26 @@
         footer {
             font-family: Helvetica, Arial, sans-serif;
             text-align: center;
-            padding: 30px 20px; /* Adjusted padding for better spacing */
+            padding: 30px 20px;
             font-size: 0.8rem;
-            color: #555; /* Using a dark gray for a softer look */
+            color: #555;
             transition: color 0.3s ease;
         }
 
         footer a {
-            color: inherit; /* Makes the link color the same as the footer text */
-            text-decoration: none; /* Removes the default underline */
-            transition: all 0.2s ease-in-out; /* Smooth transition for hover effect */
+            color: inherit;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out;
         }
 
         footer a:hover {
-            color: #000; /* Darkens the link on hover */
-            text-decoration: underline; /* Adds underline on hover for clear interactivity */
+            color: #000;
+            text-decoration: underline;
         }
 
         @media print {
             body { background-color: #fff; padding: 0; }
-            #download-button-container { display: none; }
+            #download-button-container, footer { display: none; } /* Also hide footer for browser print */
             #resume-content, #resume-container { 
                 box-shadow: none; 
                 margin: 0; 
@@ -133,7 +141,6 @@
             }
         }
         
-        /* Dark Mode styles based on user's OS/browser preference */
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #1c1c1e;
@@ -147,7 +154,6 @@
                 background-color: #3a3a3c;
             }
             #resume-content {
-                /* Enhance the shadow for better contrast on a dark background */
                 box-shadow: 0 0 20px rgba(0,0,0,0.5);
             }
             footer {
@@ -162,12 +168,16 @@
 </head>
 <body>
 
+    <!-- MODIFIED: Conditionally render button and footer so they don't appear in the PDF -->
+    {% if not is_pdf_render %}
     <div id="download-button-container">
         <button id="download-button" onclick="downloadPDF()">Download PDF</button>
     </div>
+    {% endif %}
 
 <div id="resume-container">
     <div id="resume-content">
+        <!-- The entire resume content remains unchanged -->
         <div style="text-align: center;">
             <h1>BLAKE RAYVID</h1>
             <p style="margin-top: 8px;"><a href="mailto:hi@blakerayvid.com" style="color: inherit; text-decoration: underline;">hi@blakerayvid.com</a></p>
@@ -187,10 +197,10 @@
         <h2>PROFESSIONAL EXPERIENCE</h2>
         <hr>
         <table style="width: 100%; border-collapse: collapse;"><tbody>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2025 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>Business Analyst</span>, Stealth Fintech – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Engineered and backtested trading strategies using ML forecasts to enhance portfolio return predictability.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Conducted quantitative analysis of market data to refine allocation models and increase strategy efficiency.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Developed full-stack dashboards for real-time strategy monitoring, reducing decision latency.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Dec 2022 – Jul 2025</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>Stagehand</span>, The Metropolitan Opera – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Orchestrated logistics for 100+ stage productions, streamlining backstage operations and equipment flow.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Aug 2019 – Dec 2022</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>Delivery Driver & Route Optimization Developer</span>, Insomnia Cookies – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Designed a <a class="resume-link" href="https://blakerayvid.com/2022/05/01/routecat/"target="_blank" rel="noopener noreferrer">clustering-based TSP route optimizer</a> in Python, cutting delivery times by 18%.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Analyzed GPS and traffic data to streamline multi-driver dispatch and routing.</p></td></tr>
-            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>JavaScript Developer</span>, City College of New York – New York, NY<p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Built <a href="https://blakerayvid.com/2019/04/04/science-sims/" target="_blank" rel="noopener noreferrer" class="resume-link">interactive educational apps</a> in JavaScript (p5.js) to visualize complex math and physics concepts.</p><p style="margin: 2px 0 0 0; padding-left: 15px; text-indent: -15px;">- Engineered physics simulations adopted by faculty for core undergraduate instruction.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2025 – Present</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>Business Analyst</span>, Stealth Fintech – New York, NY<p style="margin: 2px 0 0 0;">- Engineered and backtested trading strategies using ML forecasts to enhance portfolio return predictability.</p><p style="margin: 2px 0 0 0;">- Conducted quantitative analysis of market data to refine allocation models and increase strategy efficiency.</p><p style="margin: 2px 0 0 0;">- Developed full-stack dashboards for real-time strategy monitoring, reducing decision latency.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Dec 2022 – Jul 2025</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>Stagehand</span>, The Metropolitan Opera – New York, NY<p style="margin: 2px 0 0 0;">- Orchestrated logistics for 100+ stage productions, streamlining backstage operations and equipment flow.</p><p style="margin: 2px 0 0 0;">- Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Aug 2019 – Dec 2022</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>Delivery Driver & Route Optimization Developer</span>, Insomnia Cookies – New York, NY<p style="margin: 2px 0 0 0;">- Designed a <a class="resume-link" href="https://blakerayvid.com/2022/05/01/routecat/"target="_blank" rel="noopener noreferrer">clustering-based TSP route optimizer</a> in Python, cutting delivery times by 18%.</p><p style="margin: 2px 0 0 0;">- Analyzed GPS and traffic data to streamline multi-driver dispatch and routing.</p></td></tr>
+            <tr><td style="width: 18%; vertical-align: top; padding-bottom: 8px;">Jul 2016 – Aug 2019</td><td style="width: 82%; vertical-align: top; padding-left: 20px; padding-bottom: 8px;"><span>JavaScript Developer</span>, City College of New York – New York, NY<p style="margin: 2px 0 0 0;">- Built <a href="https://blakerayvid.com/2019/04/04/science-sims/" target="_blank" rel="noopener noreferrer" class="resume-link">interactive educational apps</a> in JavaScript (p5.js) to visualize complex math and physics concepts.</p><p style="margin: 2px 0 0 0;">- Engineered physics simulations adopted by faculty for core undergraduate instruction.</p></td></tr>
         </tbody></table>
         <h2>PROJECTS</h2>
         <hr>
@@ -222,44 +232,15 @@
     </div>
 </div>
 
+    {% if not is_pdf_render %}
     <footer>&copy; 2025 <a href="https://blakerayvid.com">Blake Rayvid</a>. All rights reserved.</footer>
+    {% endif %}
 
-    <!-- Use the html2pdf.js library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" defer></script>
+    <!-- MODIFIED: Removed html2pdf.js script tag -->
     <script>
-        // This function uses the robust html2pdf.js library.
+        // MODIFIED: This function now simply navigates to the backend PDF generation endpoint.
         function downloadPDF() {
-            const element = document.getElementById('resume-content');
-            const container = document.getElementById('resume-container');
-            const originalTransform = element.style.transform;
-            const originalContainerHeight = container.style.height;
-            
-            element.style.transform = 'none';
-            container.style.height = 'auto';
-
-            setTimeout(() => {
-                const opt = {
-                    margin:       0,
-                    filename:     'blake-rayvid-cv.pdf',
-                    enableLinks:  true,
-                    pagebreak:    { mode: 'avoid-all' },
-                    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' },
-                    html2canvas:  {
-                        scale: 2,
-                        useCORS: true,
-                        letterRendering: true
-                    }
-                };
-                
-                const worker = html2pdf().from(element).set(opt).save();
-    
-                // Restore original styles after PDF generation is complete.
-                worker.then(() => {
-                    element.style.transform = originalTransform;
-                    container.style.height = originalContainerHeight;
-                });
-
-            }, 50); 
+            window.location.href = '/download-pdf';
         }
 
         function scaleResumeForMobile() {
@@ -268,13 +249,11 @@
             
             if (!resumeContent.offsetWidth) return;
             
-            // We use document.documentElement.clientWidth for a more reliable viewport width.
             const viewportWidth = document.documentElement.clientWidth;
             
             const originalWidth = resumeContent.offsetWidth;
 
             if (viewportWidth < originalWidth) {
-                // The scaling factor is now calculated reliably.
                 const scale = viewportWidth / originalWidth;
                 resumeContent.style.transform = `scale(${scale})`;
                 resumeContent.style.transformOrigin = 'top left';
