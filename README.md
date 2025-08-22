@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
-Data scientist with expertise in machine learning, algorithm development, financial modeling and data visualization.
+Developer with expertise in machine learning, algorithm development, financial modeling and data visualization.
 
 ---
 
