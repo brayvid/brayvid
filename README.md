@@ -11,29 +11,29 @@
     <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
-Developer with 15+ years in computational problem-solving, specializing in machine learning, financial modeling, and algorithm design.
+Data scientist with expertise in machine learning, algorithm development, financial modeling and data visualization.
 
 ---
 
 ### Languages & Tools
 
 **Core Programming Languages:**
-Python, JavaScript, SQL, C++, Java, Shell
+Python, JavaScript, SQL, C++, Java
 
 **Data Science & Machine Learning:**
 Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, spaCy
 
 **Web Development:**
-HTML/CSS, Node/Express, Flask, React, Next.js, Socket.io, d3.js, p5.js, chart.js
+HTML, CSS, Node, Express, Flask, React, Next.js, Socket.io, d3.js, p5.js, chart.js
 
 **Databases:**
 PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
 
 **Scientific & Technical:**
-MATLAB, Mathematica, LaTeX, Markdown
+MATLAB, Mathematica, LaTeX, Markdown, Desmos
 
 **Development, Deployment & Version Control:**
-VSCode, Jupyter, Colab, Git, Railway, Netlify
+VSCode, Jupyter, Colab, Git, Shell, Railway, Netlify
 
 ---
 
