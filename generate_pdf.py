@@ -18,7 +18,7 @@ try:
     base_url = app.root_path  # This will be '/app' inside the container
 
     # Define the PDF page layout.
-    page_layout_css = CSS(string="@page { size: letter; margin: 0.02in; }")
+    page_layout_css = CSS(string="@page { size: letter; margin: 0.0in; }")
     
     html_obj = HTML(string=html_string, base_url=base_url)
     pdf_bytes = html_obj.write_pdf(stylesheets=[page_layout_css])
