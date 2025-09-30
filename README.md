@@ -41,11 +41,11 @@ VSCode, Jupyter, Colab, Git, Shell, Railway, Netlify
 
 | Project | Description | Technologies |
 |---|---|---|
-| **[soap](https://github.com/brayvid/soap)** | A new polling platform with one-word submissions. | Node/Express, Next.js, Socket.io, TensorFlow, d3.js |
+| **[soap](https://github.com/brayvid/soap)** | A new polling platform with one-word submissions about leaders. | Node/Express, Next.js, Socket.io, TensorFlow, d3.js |
 | **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap polling platform. | Flask, SQL, NLTK, spaCy, matplotlib |
 | **[based-news](https://github.com/brayvid/based-news)** | Curates RSS headlines using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, JavaScript, cron |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. | Flask, yfinance, pandas, matplotlib |
-| **[brayvid](https://github.com/brayvid/brayvid)** | Display resume on the web with pixel-perfect pdf download. | Flask, WeasyPrint, Docker |
+| **[brayvid](https://github.com/brayvid/brayvid)** | Displays resume on the web with pdf download. | Flask, WeasyPrint, Docker |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, QuantConnect, finance |
 | **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, p5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
