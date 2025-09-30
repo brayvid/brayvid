@@ -41,8 +41,8 @@ VSCode, Jupyter, Colab, Git, Shell, Railway, Netlify
 
 | Project | Description | Technologies |
 |---|---|---|
-| **[soap](https://github.com/brayvid/soap)** | A new polling platform with one-word submissions about leaders. | Node/Express, Next.js, Socket.io, TensorFlow, d3.js |
-| **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap polling platform. | Flask, SQL, NLTK, spaCy, matplotlib |
+| **[soap](https://github.com/brayvid/soap)** | A new polling platform where users vote on words describing their leaders. | Node/Express, Next.js, Socket.io, TensorFlow, d3.js |
+| **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap platform. | Flask, SQL, NLTK, spaCy, matplotlib |
 | **[based-news](https://github.com/brayvid/based-news)** | Curates RSS headlines using Google Gemini, tuned to your preferences. | Python, Gemini, NLTK, JavaScript, cron |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. | Flask, yfinance, pandas, matplotlib |
 | **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker |
