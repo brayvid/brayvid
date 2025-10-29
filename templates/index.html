@@ -84,6 +84,8 @@
             margin: 4px 0 6px 0;
         }
         #download-button-container { text-align: center; padding-top: 20px; padding-bottom:30px; padding-left:0px; padding-right:0px; }
+
+        /* --- BUTTON STYLES --- */
         #download-button {
             font-family: Helvetica, Arial, sans-serif;
             font-size: 10.8pt;
@@ -92,11 +94,30 @@
             border: 1px solid #ccc;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.2s;
             color: #333;
+            text-shadow: none;
+            /* Fast transition speed */
+            transition: all 0.15s ease-in-out;
         }
-        #download-button:hover { background-color: #dcdcdc; }
-        
+
+        #download-button:hover {
+            /* Left-to-right gradient with vibrant blue colors */
+            background-image: linear-gradient(
+                to right, 
+                #1E90FF, /* DodgerBlue on the left */
+                #00BFFF  /* DeepSkyBlue on the right */
+            );
+            color: #ffffff; /* White text for contrast */
+            border-color: #1E90FF; /* Matching border color */
+            
+            /* Neon blue glow effect */
+            box-shadow: 0 0 8px rgba(30, 144, 255, 0.9), 0 0 20px rgba(30, 144, 255, 0.7);
+            
+            /* Slight text glow to make it pop */
+            text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+        }
+        /* --- BUTTON STYLES END --- */
+                
         .resume-link,
         .resume-link:link,
         .resume-link:visited,
@@ -127,11 +148,11 @@
         }
 
         #projects {
-             margin: 0 0 0 0;
+            margin: 0 0 0 0;
         }
         @media print {
             body { background-color: #fff; padding: 0; }
-            #download-button-container, footer { display: none; } /* Also hide footer for browser print */
+            #download-button-container, footer { display: none; }
             #resume-content, #resume-container { 
                 box-shadow: none; 
                 margin: 0; 
@@ -141,7 +162,7 @@
                 visibility: visible !important;
             }
         }
-        
+
         @media (prefers-color-scheme: dark) {
             body {
                 background-color: #1c1c1e;
@@ -152,7 +173,15 @@
                 color: #e5e5e7;
             }
             #download-button:hover {
-                background-color: #3a3a3c;
+                background-image: linear-gradient(
+                    to right, 
+                    #1E90FF, /* DodgerBlue on the left */
+                    #00BFFF  /* DeepSkyBlue on the right */
+                );
+                color: #ffffff;
+                border-color: #1E90FF;
+                box-shadow: 0 0 8px rgba(30, 144, 255, 0.9), 0 0 20px rgba(30, 144, 255, 0.7);
+                text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
             }
             #resume-content {
                 box-shadow: 0 0 20px rgba(0,0,0,0.5);
@@ -164,7 +193,6 @@
                 color: #fff;
             }
         }
-
     </style>
 </head>
 <body>
