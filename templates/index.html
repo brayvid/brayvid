@@ -8,7 +8,6 @@
     <meta name="description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
     <meta name="author" content="Blake Rayvid">
     <link rel="canonical" href="https://cv.blakerayvid.com/">
-    <!-- Use url_for for static assets -->
     <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='src/favicon.ico') }}">
     <meta property="og:title" content="Data Science CV | Blake Rayvid">
     <meta property="og:description" content="Developer with 15+ years of programming experience, skilled in machine learning, financial modeling, and data visualization.">
@@ -85,8 +84,8 @@
         }
         #download-button-container { text-align: center; padding-top: 20px; padding-bottom:30px; padding-left:0px; padding-right:0px; }
 
-        /* --- BUTTON STYLES --- */
         #download-button {
+            position: relative;
             font-family: Helvetica, Arial, sans-serif;
             font-size: 10.8pt;
             padding: 10px 20px;
@@ -96,28 +95,19 @@
             cursor: pointer;
             color: #333;
             text-shadow: none;
-            /* Fast transition speed */
-            transition: all 0.15s ease-in-out;
+            transition: all 0.2s ease-in-out;
+            overflow: visible;
+            z-index: 1; 
         }
 
         #download-button:hover {
-            /* Left-to-right gradient with vibrant blue colors */
-            background-image: linear-gradient(
-                to right, 
-                #1E90FF, /* DodgerBlue on the left */
-                #00BFFF  /* DeepSkyBlue on the right */
-            );
-            color: #ffffff; /* White text for contrast */
-            border-color: #1E90FF; /* Matching border color */
-            
-            /* Neon blue glow effect */
-            box-shadow: 0 0 8px rgba(30, 144, 255, 0.9), 0 0 20px rgba(30, 144, 255, 0.7);
-            
-            /* Slight text glow to make it pop */
-            text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
+            background-image: linear-gradient(to right, #FFEB3B, #FFC107);
+            color: #333;
+            border-color: #FFC107;
+            box-shadow: 0 0 8px rgba(255, 215, 0, 0.9), 0 0 20px rgba(255, 215, 0, 0.7);
+            text-shadow: none;
         }
-        /* --- BUTTON STYLES END --- */
-                
+              
         .resume-link,
         .resume-link:link,
         .resume-link:visited,
@@ -172,17 +162,7 @@
                 border-color: #444;
                 color: #e5e5e7;
             }
-            #download-button:hover {
-                background-image: linear-gradient(
-                    to right, 
-                    #1E90FF, /* DodgerBlue on the left */
-                    #00BFFF  /* DeepSkyBlue on the right */
-                );
-                color: #ffffff;
-                border-color: #1E90FF;
-                box-shadow: 0 0 8px rgba(30, 144, 255, 0.9), 0 0 20px rgba(30, 144, 255, 0.7);
-                text-shadow: 0 0 2px rgba(255, 255, 255, 0.8);
-            }
+
             #resume-content {
                 box-shadow: 0 0 20px rgba(0,0,0,0.5);
             }
