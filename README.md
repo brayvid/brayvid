@@ -41,11 +41,11 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 
 | Project | Description | Technologies |
 |---|---|---|
-| **[soap](https://github.com/brayvid/soap)** | A new polling platform where users vote on words to describe their leaders. | Node, Express, SQL, Next.js, Socket.io, TensorFlow, d3.js |
-| **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap platform. | Flask, SQL, NLTK, spaCy, pandas, matplotlib |
-| **[based-news](https://github.com/brayvid/based-news)** | Curates RSS headlines according to your preferences using Google Gemini. | Python, Flask, Gemini API, SQL, NLTK, JavaScript, cron |
+| **[soap](https://github.com/brayvid/soap)** | A new polling platform where users vote on words to describe their leaders. | Node, Express, PostgreSQL, Next.js, Socket.io, TensorFlow, d3.js |
+| **[soap-dashboard](https://github.com/brayvid/soap-dashboard)** | Data dashboard for the Soap platform. | Flask, PostgreSQL, NLTK, spaCy, pandas, matplotlib |
+| **[based-news](https://github.com/brayvid/based-news)** | Curates RSS headlines according to your preferences using Google Gemini. | Flask, Gemini API, PosgreSQL, NLTK, JavaScript |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare returns of securities and portfolios against a benchmark. | Flask, yfinance, pandas, matplotlib |
-| **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker |
+| **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker, HTML, CSS, JavaScript |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, QuantConnect, finance |
 | **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, p5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
