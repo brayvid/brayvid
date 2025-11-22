@@ -1,8 +1,13 @@
 # app.py
 import os
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template, send_from_directory, redirect, url_for
 
 app = Flask(__name__)
+
+# Handle 404 errors by redirecting to the homepage
+@app.errorhandler(404)
+def page_not_found(e):
+    return redirect(url_for('resume'))
 
 @app.route('/favicon.ico')
 def favicon():
