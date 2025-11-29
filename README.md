@@ -53,4 +53,4 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 | **[skyrim-alchemy-optimizer](https://github.com/brayvid/skyrim-alchemy-optimizer)** | Maximize alchemy profitability in Skyrim using integer linear programming. | Python, SciPy, optimization |
 ---
 
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact&theme=dark">
+<!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact&theme=dark"> -->
