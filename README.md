@@ -21,10 +21,10 @@ Developer with expertise in machine learning, algorithm development, financial a
 Python, JavaScript, SQL, C++, Java
 
 **Data Science & Machine Learning:**
-Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, spaCy
+Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, Tesseract, spaCy
 
 **Web Development:**
-HTML, CSS, Node, Express, Flask, React, Next.js, Socket.io, d3.js, p5.js, chart.js
+HTML, CSS, Node, Express, Flask, React, Next.js, Socket.io, d3.js, p5.js, chart.js, Bootstrap
 
 **Databases:**
 PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
