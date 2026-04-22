@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
-Developer with expertise in machine learning, algorithm development, financial analysis and data visualization.
+Developer with expertise in machine learning, financial analysis, algorithm design and data visualization.
 
 ---
 
