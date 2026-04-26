@@ -41,12 +41,12 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 
 | Project | Description | Technologies |
 |---|---|---|
-| **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines according to your preferences with Google Gemini. | Flask, Gemini API, PosgreSQL, NLTK, JavaScript |
-| **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare performance of stocks and portfolios against a benchmark. | Flask, yfinance, pandas, matplotlib |
+| **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines according to your preferences with Google Gemini. | Flask, Gemini API, PosgreSQL, NLTK |
+| **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare performance of stocks and portfolios against a benchmark. | Flask, YFinance, Pandas, Matplotlib, Pillow |
 | **[ocr-image-search](https://github.com/brayvid/ocr-image-search)** | Search for OCR text inside a directory of images. | Flask, SQLAlchemy, Tesseract, Bootstrap |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Flatiron School Data Science Bootcamp Capstone Project. | Python, QuantConnect, finance |
-| **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker, HTML, CSS, JavaScript |
-| **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, p5.js, physics, simulation, education |
+| **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker, HTML/CSS/JS |
+| **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, P5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | An Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY |
 | **[skyrim-alchemy-optimizer](https://github.com/brayvid/skyrim-alchemy-optimizer)** | Maximize alchemy profitability in Skyrim using integer linear programming. | Python, SciPy, optimization |
