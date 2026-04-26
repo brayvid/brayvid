@@ -24,7 +24,7 @@ Python, JavaScript, SQL, C++, Java
 Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, Tesseract, spaCy
 
 **Web Development:**
-HTML, CSS, Node, Express, Flask, React, Next.js, Socket.io, d3.js, p5.js, chart.js, Bootstrap
+HTML, CSS, Node, Express, Flask, React, Next.js, D3.js, P5.js, Chart.js, Socket.io, Bootstrap
 
 **Databases:**
 PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
