@@ -18,19 +18,19 @@ Versatile developer with expertise in data science, financial analysis, algorith
 ### Languages & Tools
 
 **Core Programming Languages:**
-Python, JavaScript, SQL, C++, Java
+Python, JavaScript, Java, C++
 
 **Data Science & Machine Learning:**
 Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, Tesseract
 
 **Web Development:**
-HTML, CSS, Node, Express, Flask, React, Next.js, D3.js, P5.js, Chart.js, Socket.io, Bootstrap
+HTML, CSS, Node.js, Express, Flask, React, Next.js, D3.js, P5.js, Chart.js, Socket.io, Bootstrap
 
 **Databases:**
 PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
 
 **Scientific & Technical:**
-MATLAB, Mathematica, LaTeX, Markdown, Desmos
+Mathematica, MATLAB, LaTeX, Regex, Markdown, Desmos
 
 **Development, Deployment & Version Control:**
 VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
@@ -45,7 +45,7 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare performance of stocks and portfolios against a benchmark. | Flask, YFinance, Pandas, Matplotlib, Pillow |
 | **[ocr-image-search](https://github.com/brayvid/ocr-image-search)** | Search for OCR text inside a directory of images. | Flask, SQLAlchemy, Tesseract, Bootstrap |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Rules-based trading algorithm for SPY and TQQQ. | Python, QuantConnect, finance |
-| **[sentiment-classifier](https://github.com/brayvid/sentiment-classifier)** | Classify tweets as positive, negative or neutral with machine learning. | Python, Scikit-Learn, Word Cloud, SVC, TF-IDF |
+| **[sentiment-classifier](https://github.com/brayvid/sentiment-classifier)** | Classify tweets as positive, negative or neutral with machine learning. | Python, Scikit-Learn, SVC, TF-IDF, Word Cloud |
 | **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker, HTML/CSS/JS |
 | **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, P5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
