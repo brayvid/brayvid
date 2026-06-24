@@ -14,6 +14,11 @@ def favicon():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'src/favicon.ico', mimetype='image/vnd.microsoft.icon')
 
+@app.route('/robots.txt')
+def robots_txt():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'robots.txt', mimetype='text/plain')
+
 @app.route('/')
 def resume():
     """Renders the HTML resume page."""
