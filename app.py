@@ -19,6 +19,15 @@ def robots_txt():
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'robots.txt', mimetype='text/plain')
 
+@app.route('/llms.txt')
+def llms_txt():
+    """Serves the llms.txt Markdown CV to AI agents."""
+    return send_from_directory(
+        os.path.join(app.root_path, 'static'),
+        'llms.txt', 
+        mimetype='text/markdown'
+    )
+
 @app.route('/')
 def resume():
     """Renders the HTML resume page."""

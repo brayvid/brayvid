@@ -1,0 +1,55 @@
+# Blake Rayvid - Data Science CV
+
+> Developer with 15+ years of programming experience, specializing in data science, quantitative finance, machine learning, and computational optimization.
+
+- **Email:** hi@blakerayvid.com
+- **Website:** [blakerayvid.com](https://blakerayvid.com)
+- **LinkedIn:** [linkedin.com/in/blake-rayvid](https://www.linkedin.com/in/blake-rayvid)
+- **GitHub:** [github.com/brayvid](https://github.com/brayvid)
+
+## Professional Profile
+Versatile developer with 15+ years in computational problem-solving, specializing in financial analysis, data science and visualization. Architect of predictive models and automated systems that translate complex data into strategic intelligence and operational efficiency.
+
+## Core Skills
+- **Programming & Tools:** Python, JavaScript, MATLAB, C++, Java, Git, Shell, Jupyter Notebook, Google Colab, Visual Studio Code
+- **Data Science & Analytics:** NumPy, Pandas, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, SQL, Google Analytics
+- **Finance & Modeling:** Algorithmic Trading, Quantitative Portfolio Analysis, Backtesting, Option Pricing, Greeks, ThinkScript
+- **Web & Deployment:** Node.js, Express, React, Next.js, Socket.io, Flask, Docker, D3.js, HTML, CSS, Bootstrap, Railway, Netlify
+- **Other Systems:** Microsoft Excel, Google Sheets, Mathematica, LaTeX, Markdown, Regex, SEO, Prompt Engineering
+
+## Professional Experience
+
+### Business Analyst | Stealth Fintech | New York, NY
+*Jul 2025 – Present*
+- Engineered and backtested ML-driven trading strategies to improve portfolio return predictability.
+- Conducted quantitative market analysis to refine allocation models and boost strategy efficiency.
+- Constructed full-stack dashboards for real-time strategy monitoring, reducing decision latency.
+
+### Stagehand | The Metropolitan Opera | New York, NY
+*Dec 2022 – Jul 2025*
+- Managed logistics for 100+ stage productions, streamlining operations and equipment flow.
+- Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.
+
+### Delivery Driver & Route Optimization Developer | Insomnia Cookies | New York, NY
+*Aug 2019 – Dec 2022*
+- Designed a clustering-based TSP route optimizer in JavaScript, cutting delivery times by 18%.
+- Analyzed GPS and traffic data to streamline multi-driver dispatch and routing.
+
+### JavaScript Developer | City College of New York | New York, NY
+*Jul 2016 – Aug 2019*
+- Built interactive educational apps in JavaScript to visualize complex math and physics concepts.
+- Wrote physics simulations adopted by faculty for core undergraduate instruction.
+
+## Selected Projects
+- **Polling Platform:** Created a full-stack polling platform and dashboard (JS, Flask), analyzing 5,000+ voter inputs for trend analysis.
+- **Sentiment Classifier:** Implemented a tweet sentiment classifier, comparing multiple ML models, achieving 83% test accuracy.
+- **Stock Comparison Tool:** Deployed a Python tool to benchmark portfolio returns, visualizing performance with Matplotlib.
+- **Personalized RSS Reader:** Developed a custom news aggregator using the Gemini API and a topic-weighting algorithm.
+
+## Education
+- **Data Science Immersive Bootcamp** | Flatiron School | *Apr 2024 – Aug 2024*
+- **B.S. in Applied Mathematics (Finance Concentration)**, Minor in Physics | City College of New York | *Jan 2016 – Aug 2019*
+
+## Volunteer Experience
+- **Photographer** | Hudson West Folk Festival | *Jan 2022 – Present*
+- **Volunteer** | Invisible Hands Deliver | *Mar 2020 – Oct 2020*
