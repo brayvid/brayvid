@@ -11,7 +11,7 @@
     <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
-Versatile developer with expertise in data science, financial analysis, algorithm design and visualization.
+Versatile developer with expertise in machine learning, financial analysis, web design and data visualization.
 
 ---
 
