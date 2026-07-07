@@ -1,13 +1,13 @@
 # Blake Rayvid
 
 <p align="left">
-  <a href="https://blakerayvid.com" target="_blank">
+  <a href="https://blakerayvid.com" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Website-blakerayvid.com-blue?style=flat-square" alt="Website">
   </a>
-  <a href="https://www.linkedin.com/in/blake-rayvid/" target="_blank">
+  <a href="https://www.linkedin.com/in/blake-rayvid/" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/LinkedIn-Blake%20Rayvid-blue?style=flat-square&logo=linkedin" alt="LinkedIn">
   </a>
-  <a href="https://cv.blakerayvid.com" target="_blank">
+  <a href="https://cv.blakerayvid.com" target="_blank" rel="noopener noreferrer">
     <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
   </a>
 </p>
@@ -43,7 +43,6 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 |---|---|---|
 | **[based-news](https://github.com/brayvid/based-news)** | Curates news headlines according to your preferences with Google Gemini. | Flask, Gemini API, PosgreSQL, NLTK |
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare performance of stocks and portfolios against a benchmark. | Flask, YFinance, Pandas, Matplotlib, Pillow |
-| **[ocr-image-search](https://github.com/brayvid/ocr-image-search)** | Search for OCR text inside a directory of images. | Flask, SQLAlchemy, Tesseract, Bootstrap |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Rules-based trading algorithm for SPY and TQQQ. | Python, QuantConnect, finance |
 | **[sentiment-classifier](https://github.com/brayvid/sentiment-classifier)** | Classify tweets as positive, negative or neutral with machine learning. | Python, Scikit-Learn, TF-IDF, SVC, word-cloud |
 | **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker, HTML/CSS/JS |
@@ -51,6 +50,7 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | An Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY |
 | **[skyrim-alchemy-optimizer](https://github.com/brayvid/skyrim-alchemy-optimizer)** | Maximize alchemy profitability in Skyrim using integer linear programming. | Python, SciPy, optimization |
+| **[ocr-image-search](https://github.com/brayvid/ocr-image-search)** | Search for OCR text inside a directory of images. | Flask, SQLAlchemy, Tesseract, Bootstrap |
 | **[elevator-simulator](https://github.com/brayvid/elevator-simulator)** | An interactive elevator simulator with an advanced queueing algorithm. | Java, GUI, algorithms, object-oriented |
 ---
 
