@@ -45,7 +45,6 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
 | **[stock-returns](https://github.com/brayvid/stock-returns)** | Compare performance of stocks and portfolios against a benchmark. | Flask, YFinance, Pandas, Matplotlib, Pillow |
 | **[trading-algorithm](https://github.com/brayvid/trading-algorithm)** | Rules-based trading algorithm for SPY and TQQQ. | Python, QuantConnect, finance |
 | **[sentiment-classifier](https://github.com/brayvid/sentiment-classifier)** | Classify tweets as positive, negative or neutral with machine learning. | Python, Scikit-Learn, TF-IDF, SVC, word-cloud |
-| **[brayvid](https://github.com/brayvid/brayvid)** | Displays my resume on the web with pdf download. | Flask, WeasyPrint, Docker, HTML/CSS/JS |
 | **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, P5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver clustering traveling salesman solver for delivery services. | JavaScript, Google Maps JS API, optimization |
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | An Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY |
