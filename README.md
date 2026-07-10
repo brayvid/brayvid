@@ -21,7 +21,7 @@ Versatile developer with expertise in data science, financial analysis, web desi
 Python, JavaScript, Java, C++, SQL
 
 **Data Science & Machine Learning:**
-Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, Tesseract
+Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, Tesseract, YFinance
 
 **Web Development:**
 HTML, CSS, Node.js, Express, Flask, React, Next.js, D3.js, P5.js, Chart.js, Socket.io, Bootstrap
