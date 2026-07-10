@@ -33,7 +33,7 @@ PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
 Mathematica, MATLAB, LaTeX, Markdown, Regex, Desmos
 
 **Development, Deployment & Version Control:**
-VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify
+VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify, Streamlit
 
 ---
 
