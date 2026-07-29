@@ -1,11 +1,15 @@
 # Blake Rayvid
 
 <p align="left">
-  <nobr>
-    <a href="https://blakerayvid.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Website-blakerayvid.com-blue?style=flat-square" alt="Website"></a>
-    <a href="https://www.linkedin.com/in/blake-rayvid/" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/LinkedIn-Blake%20Rayvid-blue?style=flat-square&logo=linkedin" alt="LinkedIn"></a>
-    <a href="https://cv.blakerayvid.com" target="_blank" rel="noopener noreferrer"><img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV"></a>
-  </nobr>
+  <a href="https://blakerayvid.com" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Website-blakerayvid.com-blue?style=flat-square" alt="Website">
+  </a>
+  <a href="https://www.linkedin.com/in/blake-rayvid/" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/LinkedIn-Blake%20Rayvid-blue?style=flat-square&logo=linkedin" alt="LinkedIn">
+  </a>
+  <a href="https://cv.blakerayvid.com" target="_blank" rel="noopener noreferrer">
+    <img src="https://img.shields.io/badge/Resume-cv.blakerayvid.com-blue?style=flat-square" alt="CV">
+  </a>
 </p>
 
 Versatile developer with expertise in data science, financial analysis, web design and visualization.
