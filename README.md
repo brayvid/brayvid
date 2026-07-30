@@ -45,6 +45,4 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify, Streamlit
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY, timelapse |
 | **[skyrim-alchemy-optimizer](https://github.com/brayvid/skyrim-alchemy-optimizer)** | Maximize alchemy profitability in Skyrim using integer linear programming. | Python, SciPy, optimization, milp |
 | **[elevator-simulator](https://github.com/brayvid/elevator-simulator)** | Interactive elevator simulator with an advanced queueing algorithm. | Java, Swing, GUI, LOOK, object-oriented programming |
----
 
-<!-- <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=brayvid&hide=mathematica,typescript,pug,m,jupyter%20notebook&layout=compact&theme=dark"> -->
