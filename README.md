@@ -40,6 +40,7 @@ VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify, Streamlit
 | **[sentiment-classifier](https://github.com/brayvid/sentiment-classifier)** | Classify tweets as positive, negative or neutral with machine learning. | Python, Scikit-Learn, TF-IDF, SVC, word cloud, text classification |
 | **[fashion-mnist-cnn](https://github.com/brayvid/fashion-mnist-cnn)** | Convolutional neural network classifying articles of clothing. | Python, PyTorch, CNN, torchvision, image classification, deep learning |
 | **[ocr-image-search](https://github.com/brayvid/ocr-image-search)** | Search for OCR text inside a directory of images. | Flask, SQLAlchemy, Tesseract, Bootstrap, text recognition |
+| **[correlate-health](https://github.com/brayvid/correlate-health)** | Discover hidden connections in your Apple Health data. | Apple HealthKit, Swift, iOS, health, statistics |
 | **[science-sims](https://github.com/brayvid/science-sims)** | Interactive visualizations of math and science problems. | JavaScript, P5.js, physics, simulation, education |
 | **[routecat](https://github.com/brayvid/routecat)** | Multi-driver traveling salesman solver for delivery services. | JavaScript, Google Maps API, optimization, clustering |
 | **[shutter-controller](https://github.com/brayvid/shutter-controller)** | Arduino-based camera controller for custom timelapse photography. | Arduino, C++, Python, DIY, timelapse |
