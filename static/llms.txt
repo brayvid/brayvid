@@ -42,7 +42,7 @@ Versatile developer with 15+ years in computational problem-solving, specializin
 
 ## Selected Projects
 - **Polling Platform:** Created a full-stack polling platform and dashboard (JS, Flask), analyzing 5,000+ voter inputs for trend analysis.
-- **Sentiment Classifier:** Implemented a tweet sentiment classifier, comparing multiple ML models, achieving 83% test accuracy.
+- **Image Classifier:** Trained a 3-block convolutional neural net (CNN) on the Fashion-MNIST dataset, achieving a 93% test accuracy.
 - **Stock Comparison Tool:** Deployed a Python tool to benchmark portfolio returns, visualizing performance with Matplotlib.
 - **Personalized RSS Reader:** Developed a custom news aggregator using the Gemini API and a topic-weighting algorithm.
 
