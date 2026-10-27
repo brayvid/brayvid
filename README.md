@@ -11,22 +11,22 @@ Versatile developer with expertise in data science, financial analysis, web desi
 ### Languages & Tools
 
 **Core Programming Languages:**
-Python, JavaScript, Java, C++, SQL
+Python, JavaScript, Java, C++
 
 **Data Science & Machine Learning:**
 Pandas, NumPy, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, Tesseract, YFinance
 
 **Web Development:**
-HTML, CSS, Node.js, Express, Flask, React, Next.js, D3.js, P5.js, Chart.js, Socket.io, Bootstrap
+HTML, CSS, Node.js, Express, Flask, React, Next.js, D3.js, P5.js, Chart.js, Socket.io, Bootstrap, JQuery
 
 **Databases:**
-PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
+SQL, PostgreSQL, MySQL, SQLite, SQLAlchemy, MongoDB
 
 **Scientific & Technical:**
-Mathematica, Wolfram Engine, MATLAB, LaTeX, Markdown, Regex, Desmos
+Mathematica, Wolfram Engine, MATLAB, LaTeX, Markdown, Regex, Desmos, ThinkScript
 
 **Development, Deployment & Version Control:**
-VSCode, Jupyter, Colab, Docker, Git, Shell, Railway, Netlify, Streamlit
+VS Code, Jupyter, Colab, XCode, Swift, Docker, Git, Shell, Railway, Netlify, Streamlit
 
 ---
 

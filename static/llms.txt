@@ -8,7 +8,7 @@
 - **GitHub:** [github.com/brayvid](https://github.com/brayvid)
 
 ## Professional Profile
-Versatile developer with 15+ years in computational problem-solving, specializing in financial analysis, data science, web design and visualization. Architect of predictive models and automated systems that translate complex data into strategic intelligence and operational efficiency.
+Versatile developer with 15+ years in computational problem-solving, specializing in data science, financial analysis, web design and visualization. Architect of predictive models and automated systems that translate complex data into strategic intelligence and operational efficiency.
 
 ## Core Skills
 - **Programming & Tools:** Python, JavaScript, MATLAB, C++, Java, Git, Shell, Jupyter Notebook, Google Colab, Visual Studio Code
@@ -19,7 +19,7 @@ Versatile developer with 15+ years in computational problem-solving, specializin
 
 ## Professional Experience
 
-### Business Analyst | Stealth Fintech | New York, NY
+### Data Scientist | Stealth Fintech | New York, NY
 *Jul 2025 – Present*
 - Engineered and backtested ML-driven trading strategies to improve portfolio return predictability.
 - Conducted quantitative market analysis to refine allocation models and boost strategy efficiency.
@@ -30,7 +30,7 @@ Versatile developer with 15+ years in computational problem-solving, specializin
 - Managed logistics for 100+ stage productions, streamlining operations and equipment flow.
 - Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.
 
-### Delivery Driver & Route Optimization Developer | Insomnia Cookies | New York, NY
+### Route Optimization Developer | Serve U Brands | New York, NY
 *Aug 2019 – Dec 2022*
 - Designed a clustering-based TSP route optimizer in JavaScript, cutting delivery times by 18%.
 - Analyzed GPS and traffic data to streamline multi-driver dispatch and routing.
