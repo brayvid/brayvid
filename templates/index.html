@@ -247,7 +247,6 @@
 
     <script>
         function downloadPDF() {
-            // Send event to Google Analytics
             if (typeof gtag === 'function') {
                 gtag('event', 'download_cv', {
                     'file_name': 'blake-rayvid-cv.pdf',
@@ -255,8 +254,10 @@
                 });
             }
 
-            // Trigger the download
-            window.location.href = '/download-pdf';
+            // Give the tracking request 150ms to fire before redirecting
+            setTimeout(function() {
+                window.location.href = '/download-pdf';
+            }, 150);
         }
 
         function scaleResumeForMobile() {
