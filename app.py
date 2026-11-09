@@ -1,8 +1,22 @@
 # app.py
+from datetime import datetime
 import os
-from flask import Flask, render_template, send_from_directory, redirect, url_for
+from dotenv import load_dotenv
+from flask import (
+    Flask,
+    redirect,
+    render_template,
+    request,
+    send_from_directory,
+    url_for,
+)
+import requests
+
+load_dotenv()
 
 app = Flask(__name__)
+
+DISCORD_WEBHOOK_URL = os.environ.get('DISCORD_WEBHOOK_URL')
 
 # Handle 404 errors by redirecting to the homepage
 @app.errorhandler(404)
@@ -36,6 +50,26 @@ def resume():
 @app.route('/download-pdf')
 def download_pdf():
     """Serves the pre-generated PDF file from the Docker image."""
+    if DISCORD_WEBHOOK_URL:
+        try:
+            user_agent = request.headers.get('User-Agent', 'Unknown Device')
+            referrer = request.referrer or 'Direct / None'
+            payload = {
+                'embeds': [{
+                    'title': '🚨 CV Downloaded!',
+                    'color': 16766720,
+                    'fields': [
+                        {'name': 'Site', 'value': 'cv.blakerayvid.com', 'inline': True},
+                        {'name': 'Referrer', 'value': referrer, 'inline': True},
+                        {'name': 'Device / Browser', 'value': user_agent[:100] + '...' if len(user_agent) > 100 else user_agent, 'inline': False}
+                    ],
+                    'footer': {'text': datetime.utcnow().strftime('%Y-%m-%d %H:%M:%S UTC') + ' | Railway'}
+                }]
+            }
+            requests.post(DISCORD_WEBHOOK_URL, json=payload, timeout=2)
+        except Exception as e:
+            app.logger.error(f'Discord notification failed: {e}')
+
     try:
         return send_from_directory(
             directory=app.root_path,
