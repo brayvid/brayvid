@@ -52,6 +52,7 @@ def download_pdf():
     """Serves the pre-generated PDF file from the Docker image."""
     if DISCORD_WEBHOOK_URL:
         try:
+            client_ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0].strip()
             user_agent = request.headers.get('User-Agent', 'Unknown Device')
             referrer = request.referrer or 'Direct / None'
             payload = {
@@ -60,6 +61,7 @@ def download_pdf():
                     'color': 16766720,
                     'fields': [
                         {'name': 'Site', 'value': 'cv.blakerayvid.com', 'inline': True},
+                        {'name': 'IP Address', 'value': client_ip, 'inline': True},
                         {'name': 'Referrer', 'value': referrer, 'inline': True},
                         {'name': 'Device / Browser', 'value': user_agent[:100] + '...' if len(user_agent) > 100 else user_agent, 'inline': False}
                     ],
