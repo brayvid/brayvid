@@ -11,7 +11,7 @@
 Versatile developer with 15+ years in computational problem-solving, specializing in data science, financial analysis, web design and visualization. Architect of predictive models and automated systems that translate complex data into strategic intelligence and operational efficiency.
 
 ## Core Skills
-- **Programming & Tools:** Python, JavaScript, MATLAB, C++, Java, Git, Shell, Jupyter Notebook, Google Colab, Visual Studio Code
+- **Programming & Tools:** Python, JavaScript, MATLAB, C++, Java, Git, Shell, Jupyter Notebook, Google Colab, VS Code, XCode
 - **Data Science & Analytics:** NumPy, Pandas, Matplotlib, SciPy, Scikit-Learn, PyTorch, TensorFlow, NLTK, SQL, Google Analytics
 - **Finance & Modeling:** Algorithmic Trading, Quantitative Portfolio Analysis, Backtesting, Option Pricing, Greeks, ThinkScript
 - **Web & Deployment:** Node.js, Express, React, Next.js, Socket.io, Flask, Docker, D3.js, HTML, CSS, Bootstrap, Railway, Netlify
@@ -26,7 +26,7 @@ Versatile developer with 15+ years in computational problem-solving, specializin
 - Constructed full-stack dashboards for real-time strategy monitoring, reducing decision latency.
 
 ### Stagehand Extra | The Metropolitan Opera | New York, NY
-*Dec 2022 – Present*
+*Dec 2022 – Jul 2025*
 - Managed logistics for 100+ stage productions, streamlining operations and equipment flow.
 - Optimized real-time setup processes, mitigating bottlenecks to reduce production delays.
 
@@ -41,7 +41,7 @@ Versatile developer with 15+ years in computational problem-solving, specializin
 - Wrote physics simulations adopted by faculty for core undergraduate instruction.
 
 ## Selected Projects
-- **Polling Platform:** Created a full-stack polling platform and dashboard (JS, Flask), analyzing 5,000+ voter inputs for trend analysis.
+- **Progress Health:** Created an iOS health analytics app to uncover hidden correlations between 25+ time-series health data streams.
 - **Image Classifier:** Trained a 3-block convolutional neural net (CNN) on the Fashion-MNIST dataset, achieving a 93% test accuracy.
 - **Stock Comparison Tool:** Deployed a Python tool to benchmark portfolio returns, visualizing performance with Matplotlib.
 - **Personalized RSS Reader:** Developed a custom news aggregator using the Gemini API and a topic-weighting algorithm.
