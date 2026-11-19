@@ -55,13 +55,25 @@ def download_pdf():
             client_ip = request.headers.get('X-Forwarded-For', request.remote_addr).split(',')[0].strip()
             user_agent = request.headers.get('User-Agent', 'Unknown Device')
             referrer = request.referrer or 'Direct / None'
+
+            # Look up approximate location from IP
+            location = 'Local / Private Network'
+            if not client_ip.startswith(('127.', '192.168.', '10.', '::1')):
+                try:
+                    geo = requests.get(f'http://ip-api.com/json/{client_ip}', timeout=1.5).json()
+                    if geo.get('status') == 'success':
+                        location = f"{geo.get('city')}, {geo.get('region')}, {geo.get('country')}"
+                except Exception:
+                    location = 'Lookup Failed'
+
             payload = {
                 'embeds': [{
-                    'title': '🚨 CV Downloaded!',
+                    'title': 'CV Downloaded!',
                     'color': 16766720,
                     'fields': [
                         {'name': 'Site', 'value': 'cv.blakerayvid.com', 'inline': True},
                         {'name': 'IP Address', 'value': client_ip, 'inline': True},
+                        {'name': 'Location', 'value': location, 'inline': True},
                         {'name': 'Referrer', 'value': referrer, 'inline': True},
                         {'name': 'Device / Browser', 'value': user_agent[:100] + '...' if len(user_agent) > 100 else user_agent, 'inline': False}
                     ],
